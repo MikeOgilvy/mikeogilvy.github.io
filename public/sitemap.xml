@@ -41,6 +41,8 @@
     <loc>http://localhost:1313/blog/posts/hello-world/hello-world/</loc>
     <lastmod>2026-03-07T16:09:29+08:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/blog/posts/gears/gears_explained/</loc>
+  </url><url>
     <loc>http://localhost:1313/blog/archives/</loc>
   </url><url>
     <loc>http://localhost:1313/blog/categories/</loc>
