@@ -1,3 +1,8 @@
+/* 增大主内容宽度，减少两侧留白 */
+:root {
+    --main-width: 900px;
+}
+
 /* 摄影网格布局 */
 .photo-grid {
     display: grid;
@@ -69,24 +74,8 @@
 }
 
 /* ================================================================
-   摄影系统最终修正版 - Mike's Photography
+    摄影系统最终修正版 - Mike's Photography
    ================================================================ */
-
-/* 0. 字体引入 */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Noto+Serif+SC:wght@400;700&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Noto+Serif+SC:wght@400;700&display=swap');
-
-body.photography-wide .post-single, 
-body.photography-wide .post-content,
-body.photography-wide .post-title,
-body.photography-wide .post-meta,
-
-/* 针对列表主页：只改文章列表里的标题和描述 */
-body:has(a[href*="photography"]) .main .entry-header h2,
-body:has(a[href*="photography"]) .main .entry-content,
-body:has(a[href*="photography"]) .main .first-entry .entry-title {
-    font-family: "Playfair Display", "Noto Serif SC", serif !important;
-} */
 
 /* 强制保护：确保导航栏按钮、搜索图标、Logo 维持原样 */
 .header .logo,
@@ -162,12 +151,6 @@ body.photography-wide .post-content p:has(img):not(:has(img + img)) img {
     margin: 40px auto !important;
 }
 
-/* 7. 主页列表样式微调：让标题也变好看 */
-body:has([href*="photography"]) .first-entry .entry-title,
-body:has([href*="photography"]) .entry-title {
-    font-family: "Playfair Display", "Noto Serif SC", serif !important;
-}
-
 body.photography-wide .post-content p:has(img):hover img:not(:hover) {
     filter: brightness(0.8);
 }
@@ -218,7 +201,7 @@ body.photography-wide .post-tags a {
     padding: 2px 10px;
     background: var(--code-bg); /* 恢复背景色 */
     border-radius: 4px;
-    font-family: var(--common-font-family); /* 标签通常用无衬线体更清爽 */
+    font-family: var(--common-font-family);
     font-size: 14px;
 }
 

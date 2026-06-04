@@ -10,7 +10,6 @@ paginate = 5
     home = ["HTML", "RSS", "JSON"]
 
 [params]
-  customCSS = ["css/extended.css"]
   env = "production"
   description = "Recording life, technology and essays"
   author = "Mike"

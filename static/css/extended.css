@@ -1,9 +1,8 @@
 /* 针对首页描述文字的样式 */
 .description {
-    font-family: 'Montserrat', sans-serif; /* 使用刚才引入的字体 */
     font-size: 1.2rem;
     color: var(--secondary);
-    min-height: 1.5em; /* 防止文字跳动 */
+    min-height: 1.5em;
     display: inline-block;
 }
 
