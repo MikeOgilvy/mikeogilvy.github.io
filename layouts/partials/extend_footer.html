@@ -89,6 +89,32 @@
         window.addEventListener("scroll", updatePosition);
     })();
 </script>
+
+<script>
+    (function() {
+        var sidebar = document.getElementById("toc-sidebar");
+        if (!sidebar) return;
+        var links = sidebar.querySelectorAll("a");
+        var headings = [];
+        links.forEach(function(a) {
+            var id = a.getAttribute("href");
+            if (id && id.startsWith("#")) {
+                var el = document.getElementById(id.slice(1));
+                if (el) headings.push({ link: a, el: el });
+            }
+        });
+        if (!headings.length) return;
+        window.addEventListener("scroll", function() {
+            var scrollPos = window.scrollY + 120;
+            var active = null;
+            headings.forEach(function(h) {
+                if (h.el.offsetTop <= scrollPos) active = h.link;
+            });
+            links.forEach(function(a) { a.classList.remove("active"); });
+            if (active) active.classList.add("active");
+        });
+    })();
+</script>
 {{- end -}}
 
 <script>

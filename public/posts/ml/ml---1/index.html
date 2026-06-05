@@ -33,7 +33,7 @@ Loss Function
 The most common loss function for linear regression is Mean Squared Error (MSE).">
 <meta name="author" content="Mike">
 <link rel="canonical" href="http://localhost:1313/posts/ml/ml---1/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.d0a648c3f1798e549431a6263b27c01e958debaaf4fff0fefd695253eb0642a3.css" integrity="sha256-0KZIw/F5jlSUMaYmOyfAHpWN66r0//D&#43;/WlSU&#43;sGQqM=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.4d26c449d5749ea11f20381495d50883bab093fc93b4f881f8c934d98e7cbbc5.css" integrity="sha256-TSbESdV0nqEfIDgUldUIg7qwk/yTtPiB&#43;Mk02Y58u8U=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/ico/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -229,7 +229,7 @@ where:
 }
 </script>
 </head>
-<body id="top"><a href="#top" id="back-to-top" style="position:fixed;bottom:80px;right:30px;z-index:9999;width:44px;height:44px;border-radius:50%;background:var(--tertiary);display:flex;align-items:center;justify-content:center;opacity:0.6;transition:opacity 0.3s,transform 0.2s;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.15)" title="Back to top"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><polyline points="18 15 12 9 6 15"></polyline></svg></a><header class="header">
+<body id="top"><a href="#top" id="back-to-top" style="position:fixed;bottom:80px;right:100px;z-index:9999;width:44px;height:44px;border-radius:50%;background:var(--tertiary);display:flex;align-items:center;justify-content:center;opacity:0.6;transition:opacity 0.3s,transform 0.2s;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.15)" title="Back to top"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><polyline points="18 15 12 9 6 15"></polyline></svg></a><header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="http://localhost:1313/" accesskey="h" title="Mike&#39;s Blog (Alt + H)">Mike&#39;s Blog</a>
@@ -750,8 +750,84 @@ L_{CV} = \frac{1}{k} \sum_{i=1}^k L_i
         async>
 </script>
 </article>
-    </main>
-    
+    </main><aside id="toc-sidebar">
+    <div class="toc-sidebar-header">On this page</div>
+    <nav class="toc-sidebar-nav"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1-basic-model-of-linear-regression">1. Basic Model of Linear Regression</a>
+      <ul>
+        <li><a href="#model-form">Model Form</a></li>
+        <li><a href="#loss-function">Loss Function</a></li>
+      </ul>
+    </li>
+    <li><a href="#2-solvers-for-linear-regression">2. Solvers for Linear Regression</a>
+      <ul>
+        <li><a href="#21-gradient-descent-gd">2.1 Gradient Descent (GD)</a></li>
+        <li><a href="#22-normal-equation">2.2 Normal Equation</a></li>
+        <li><a href="#probability-view-of-linear-regression">Probability View of Linear Regression</a></li>
+      </ul>
+    </li>
+    <li><a href="#3-underfitting-and-overfitting">3. Underfitting and Overfitting</a>
+      <ul>
+        <li><a href="#underfitting">Underfitting</a></li>
+        <li><a href="#overfitting">Overfitting</a></li>
+      </ul>
+    </li>
+    <li><a href="#4-regularization-to-prevent-overfitting">4. Regularization to Prevent Overfitting</a>
+      <ul>
+        <li><a href="#41-ridge-regression-l2-regularization">4.1 Ridge Regression (L2 Regularization)</a></li>
+        <li><a href="#42-lasso-regression-l1-regularization">4.2 Lasso Regression (L1 Regularization)</a></li>
+      </ul>
+    </li>
+    <li><a href="#5-model-selection-and-generalization-gap">5. Model Selection and Generalization Gap</a>
+      <ul>
+        <li><a href="#51-true-error-expected-risk">5.1 True Error (Expected Risk)</a></li>
+        <li><a href="#52-validation--empirical-error">5.2 Validation / Empirical Error</a></li>
+        <li><a href="#53-generalization-gap">5.3 Generalization Gap</a></li>
+        <li><a href="#54-generalization-bound">5.4 Generalization Bound</a></li>
+        <li><a href="#55-effect-of-testing-multiple-models">5.5 Effect of Testing Multiple Models</a></li>
+        <li><a href="#56-interpretation">5.6 Interpretation</a></li>
+        <li><a href="#57-cross-validation">5.7 Cross-Validation</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></nav>
+</aside>
+<script>
+    (function() {
+        var sidebar = document.getElementById("toc-sidebar");
+        if (!sidebar) return;
+        var nav = sidebar.querySelector("nav");
+        if (!nav) return;
+        var lists = nav.querySelectorAll("ul ul");
+        lists.forEach(function(ul) {
+            ul.style.display = "none";
+            var parentLi = ul.parentElement;
+            if (parentLi && parentLi.tagName === "LI") {
+                var toggler = document.createElement("span");
+                toggler.className = "toc-toggle";
+                toggler.textContent = "\u25B6";
+                toggler.style.cssText = "cursor:pointer;margin-right:4px;font-size:10px;display:inline-block;transition:transform 0.2s;";
+                var firstChild = parentLi.firstChild;
+                if (firstChild && firstChild.nodeType === 3) {
+                    firstChild.remove();
+                }
+                parentLi.insertBefore(toggler, parentLi.firstChild);
+                toggler.addEventListener("click", function(e) {
+                    e.stopPropagation();
+                    var childUl = parentLi.querySelector(":scope > ul");
+                    if (!childUl) childUl = parentLi.querySelector("ul");
+                    if (childUl) {
+                        var isOpen = childUl.style.display !== "none";
+                        childUl.style.display = isOpen ? "none" : "block";
+                        toggler.textContent = isOpen ? "\u25B6" : "\u25BC";
+                        toggler.style.transform = isOpen ? "rotate(0deg)" : "rotate(0deg)";
+                    }
+                });
+            }
+        });
+    })();
+</script>
 <footer class="footer">
         <span>&copy; 2026 <a href="http://localhost:1313/">Mike&#39;s Blog</a></span> · 
 
@@ -842,6 +918,32 @@ L_{CV} = \frac{1}{k} \sum_{i=1}^k L_i
         updatePosition();
         window.addEventListener("resize", updatePosition);
         window.addEventListener("scroll", updatePosition);
+    })();
+</script>
+
+<script>
+    (function() {
+        var sidebar = document.getElementById("toc-sidebar");
+        if (!sidebar) return;
+        var links = sidebar.querySelectorAll("a");
+        var headings = [];
+        links.forEach(function(a) {
+            var id = a.getAttribute("href");
+            if (id && id.startsWith("#")) {
+                var el = document.getElementById(id.slice(1));
+                if (el) headings.push({ link: a, el: el });
+            }
+        });
+        if (!headings.length) return;
+        window.addEventListener("scroll", function() {
+            var scrollPos = window.scrollY + 120;
+            var active = null;
+            headings.forEach(function(h) {
+                if (h.el.offsetTop <= scrollPos) active = h.link;
+            });
+            links.forEach(function(a) { a.classList.remove("active"); });
+            if (active) active.classList.add("active");
+        });
     })();
 </script><script>
     document.addEventListener("DOMContentLoaded", function() {

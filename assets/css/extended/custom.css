@@ -306,3 +306,79 @@ body.photography-wide .post-content + .post-footer {
     align-items: center !important; 
 }
 
+/* ================================================================
+   右侧浮动目录
+   ================================================================ */
+#toc-sidebar {
+    position: fixed;
+    top: 150px;
+    right: 100px;
+    width: 260px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    z-index: 998;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 13px;
+    line-height: 1.8;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.toc-sidebar-header {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--primary);
+}
+#toc-sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#toc-sidebar nav li {
+    margin: 2px 0;
+    position: relative;
+    padding-left: 14px;
+}
+.toc-toggle {
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 14px;
+    font-size: 9px;
+    color: var(--secondary);
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.1s;
+}
+.toc-toggle:hover {
+    color: var(--primary);
+}
+#toc-sidebar nav a {
+    display: block;
+    padding: 2px 6px;
+    border-radius: 5px;
+    color: var(--secondary);
+    text-decoration: none;
+    transition: background 0.1s, color 0.1s;
+}
+#toc-sidebar nav a:hover,
+#toc-sidebar nav a.active {
+    background: var(--tertiary);
+    color: var(--primary);
+}
+#toc-sidebar nav ul ul {
+    padding-left: 8px;
+}
+#toc-sidebar nav ul ul ul {
+    padding-left: 4px;
+}
+@media screen and (max-width: 1400px) {
+    #toc-sidebar {
+        display: none;
+    }
+}
+
