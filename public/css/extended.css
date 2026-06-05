@@ -6,18 +6,6 @@
     display: inline-block;
 }
 
-/* 模拟打字机的光标 */
-.typing-cursor {
-    margin-left: 2px;
-    border-right: 2px solid var(--secondary);
-    animation: blink 0.3s infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
 /* 1. 开启视图过渡动画 (现代浏览器支持) */
 @view-transition {
   navigation: auto; /* 允许在页面导航时自动触发动画 */

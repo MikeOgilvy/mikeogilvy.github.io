@@ -3,6 +3,69 @@
     --main-width: 900px;
 }
 
+/* Friend 卡片点击反馈 */
+.friend-card > div {
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+.friend-card:hover > div {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.friend-card:active > div {
+    transform: scale(0.96);
+}
+
+/* Post 卡片悬停反馈 */
+.post-entry {
+    transition: transform 0.1s, box-shadow 0.1s;
+}
+.post-entry:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.post-entry:active {
+    transform: scale(0.96);
+}
+
+/* Archive 卡片反馈 */
+.archive-entry {
+    transition: transform 0.1s, box-shadow 0.1s;
+    border-radius: 8px;
+}
+.archive-entry:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    background: var(--entry);
+}
+.archive-entry:active {
+    transform: scale(0.96);
+}
+
+/* 统一个人博客交互过渡 */
+.post-tags a,
+.paginav a,
+.paginav span:not(.title),
+.footer a,
+.top-link,
+.toc a,
+.terms-tags a,
+.button {
+    transition: background 0.1s, color 0.1s, box-shadow 0.1s;
+}
+
+::-webkit-scrollbar-thumb {
+    transition: background 0.1s;
+}
+
+/* 搜索结果统一 */
+#searchResults .focus {
+    transition: transform 0.1s;
+}
+#searchResults li:active,
+#searchResults .focus {
+    transform: scale(0.96);
+}
+
 /* 摄影网格布局 */
 .photo-grid {
     display: grid;
