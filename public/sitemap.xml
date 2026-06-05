@@ -2,57 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/gears/gears_explained/</loc>
+    <loc>https://mikeogilvy.github.io/posts/gears/gears_explained/</loc>
     <lastmod>2026-06-05T07:19:29+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://mikeogilvy.github.io/</loc>
     <lastmod>2026-06-05T07:19:29+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>https://mikeogilvy.github.io/posts/</loc>
     <lastmod>2026-06-05T07:19:29+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/single-cell/</loc>
+    <loc>https://mikeogilvy.github.io/tags/single-cell/</loc>
     <lastmod>2026-06-05T07:19:29+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://mikeogilvy.github.io/tags/</loc>
     <lastmod>2026-06-05T07:19:29+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/virtual-cell/</loc>
+    <loc>https://mikeogilvy.github.io/tags/virtual-cell/</loc>
     <lastmod>2026-06-05T07:19:29+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nature/</loc>
+    <loc>https://mikeogilvy.github.io/tags/nature/</loc>
     <lastmod>2026-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photography/</loc>
+    <loc>https://mikeogilvy.github.io/photography/</loc>
     <lastmod>2026-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/photography/qingshanlake/</loc>
+    <loc>https://mikeogilvy.github.io/photography/qingshanlake/</loc>
     <lastmod>2026-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/qingshan-lake/</loc>
+    <loc>https://mikeogilvy.github.io/tags/qingshan-lake/</loc>
     <lastmod>2026-04-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/machine-learning/</loc>
+    <loc>https://mikeogilvy.github.io/tags/machine-learning/</loc>
     <lastmod>2026-03-28T02:24:29+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/ml/ml---2/</loc>
+    <loc>https://mikeogilvy.github.io/posts/ml/ml---2/</loc>
     <lastmod>2026-03-28T02:24:29+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/ml/ml---1/</loc>
+    <loc>https://mikeogilvy.github.io/posts/ml/ml---1/</loc>
     <lastmod>2026-03-22T03:32:29+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/single-cell/learning-and-practice-of-single-cell-sequencing/</loc>
+    <loc>https://mikeogilvy.github.io/posts/single-cell/learning-and-practice-of-single-cell-sequencing/</loc>
     <lastmod>2026-03-09T16:09:29+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/hello-world/hello-world/</loc>
+    <loc>https://mikeogilvy.github.io/posts/hello-world/hello-world/</loc>
     <lastmod>2026-03-07T16:09:29+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/archives/</loc>
+    <loc>https://mikeogilvy.github.io/archives/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://mikeogilvy.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/friends/</loc>
+    <loc>https://mikeogilvy.github.io/friends/</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://mikeogilvy.github.io/search/</loc>
   </url>
 </urlset>
