@@ -32,7 +32,7 @@ Loss Function
 The most common loss function for linear regression is Mean Squared Error (MSE).">
 <meta name="author" content="Mike">
 <link rel="canonical" href="http://localhost:1313/posts/ml/ml---1/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.acd2af71f3bec71402b098de67eda41b4440ba020201078caa864885f99d3c76.css" integrity="sha256-rNKvcfO&#43;xxQCsJjeZ&#43;2kG0RAugICAQeMqoZIhfmdPHY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.62f3299fe9b0a84703c8303de0bd9c4384a96ceb61c2ea9b5b819f13b05da914.css" integrity="sha256-YvMpn&#43;mwqEcDyDA94L2cQ4SpbOthwuqbW4GfE7BdqRQ=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/ico/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -228,7 +228,7 @@ where:
 }
 </script>
 </head>
-<body id="top"><a href="#top" id="back-to-top" style="position:fixed;bottom:80px;right:40px;z-index:9999;width:44px;height:44px;border-radius:50%;background:var(--tertiary);display:flex;align-items:center;justify-content:center;opacity:0.6;transition:opacity 0.3s,transform 0.2s;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.15)" title="Back to top"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><polyline points="18 15 12 9 6 15"></polyline></svg></a><header class="header">
+<body id="top"><a href="#top" id="back-to-top" style="position:fixed;bottom:80px;right:30px;z-index:9999;width:44px;height:44px;border-radius:50%;background:var(--tertiary);display:flex;align-items:center;justify-content:center;opacity:0.6;transition:opacity 0.3s,transform 0.2s;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.15)" title="Back to top"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><polyline points="18 15 12 9 6 15"></polyline></svg></a><header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="http://localhost:1313/" accesskey="h" title="Mike&#39;s Blog (Alt + H)">Mike&#39;s Blog</a>
@@ -745,7 +745,8 @@ L_{CV} = \frac{1}{k} \sum_{i=1}^k L_i
 </article>
     </main><aside id="toc-sidebar">
     <div class="toc-sidebar-header" style="padding: 16px 16px 16px 16px;">On This Page</div>
-    <nav class="toc-sidebar-nav"><nav id="TableOfContents">
+    <nav class="toc-sidebar-nav">
+        <nav id="TableOfContents">
   <ul>
     <li><a href="#1-basic-model-of-linear-regression">1. Basic Model of Linear Regression</a>
       <ul>
@@ -784,7 +785,8 @@ L_{CV} = \frac{1}{k} \sum_{i=1}^k L_i
       </ul>
     </li>
   </ul>
-</nav></nav>
+</nav>
+    </nav>
 </aside>
 <script>
     (function() {
@@ -802,9 +804,7 @@ L_{CV} = \frac{1}{k} \sum_{i=1}^k L_i
                 toggler.textContent = "\u25B6";
                 toggler.style.cssText = "cursor:pointer;margin-right:4px;font-size:10px;display:inline-block;transition:transform 0.2s;";
                 var firstChild = parentLi.firstChild;
-                if (firstChild && firstChild.nodeType === 3) {
-                    firstChild.remove();
-                }
+                if (firstChild && firstChild.nodeType === 3) firstChild.remove();
                 parentLi.insertBefore(toggler, parentLi.firstChild);
                 toggler.addEventListener("click", function(e) {
                     e.stopPropagation();
@@ -814,7 +814,6 @@ L_{CV} = \frac{1}{k} \sum_{i=1}^k L_i
                         var isOpen = childUl.style.display !== "none";
                         childUl.style.display = isOpen ? "none" : "block";
                         toggler.textContent = isOpen ? "\u25B6" : "\u25BC";
-                        toggler.style.transform = isOpen ? "rotate(0deg)" : "rotate(0deg)";
                     }
                 });
             }

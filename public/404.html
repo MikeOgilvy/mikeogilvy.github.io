@@ -202,45 +202,7 @@
 </header>
 <main class="main">
 <div class="not-found">404</div>
-    </main><aside id="toc-sidebar">
-    <div class="toc-sidebar-header" style="padding: 16px 16px 16px 16px;">On This Page</div>
-    <nav class="toc-sidebar-nav"><nav id="TableOfContents"></nav></nav>
-</aside>
-<script>
-    (function() {
-        var sidebar = document.getElementById("toc-sidebar");
-        if (!sidebar) return;
-        var nav = sidebar.querySelector("nav");
-        if (!nav) return;
-        var lists = nav.querySelectorAll("ul ul");
-        lists.forEach(function(ul) {
-            ul.style.display = "none";
-            var parentLi = ul.parentElement;
-            if (parentLi && parentLi.tagName === "LI") {
-                var toggler = document.createElement("span");
-                toggler.className = "toc-toggle";
-                toggler.textContent = "\u25B6";
-                toggler.style.cssText = "cursor:pointer;margin-right:4px;font-size:10px;display:inline-block;transition:transform 0.2s;";
-                var firstChild = parentLi.firstChild;
-                if (firstChild && firstChild.nodeType === 3) {
-                    firstChild.remove();
-                }
-                parentLi.insertBefore(toggler, parentLi.firstChild);
-                toggler.addEventListener("click", function(e) {
-                    e.stopPropagation();
-                    var childUl = parentLi.querySelector(":scope > ul");
-                    if (!childUl) childUl = parentLi.querySelector("ul");
-                    if (childUl) {
-                        var isOpen = childUl.style.display !== "none";
-                        childUl.style.display = isOpen ? "none" : "block";
-                        toggler.textContent = isOpen ? "\u25B6" : "\u25BC";
-                        toggler.style.transform = isOpen ? "rotate(0deg)" : "rotate(0deg)";
-                    }
-                });
-            }
-        });
-    })();
-</script>
+    </main>
 <footer class="footer">
         <span>&copy; 2026 <a href="http://localhost:1313/">Mike&#39;s Blog</a></span> · 
 

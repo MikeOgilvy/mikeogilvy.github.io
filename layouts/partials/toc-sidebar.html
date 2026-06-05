@@ -1,12 +1,9 @@
-{{- if and (ne .Kind "home") (ne .Kind "section") -}}
+{{- $headers := findRE "<h[1-6].*?>" .Content -}}
+{{- if ge (len $headers) 1 -}}
 <aside id="toc-sidebar">
     <div class="toc-sidebar-header" style="padding: 16px 16px 16px 16px;">On This Page</div>
     <nav class="toc-sidebar-nav">
-        {{- if .TableOfContents -}}
         {{ .TableOfContents }}
-        {{- else -}}
-        <p style="color:var(--secondary);font-size:12px;">暂无目录</p>
-        {{- end -}}
     </nav>
 </aside>
 <script>
@@ -25,9 +22,7 @@
                 toggler.textContent = "\u25B6";
                 toggler.style.cssText = "cursor:pointer;margin-right:4px;font-size:10px;display:inline-block;transition:transform 0.2s;";
                 var firstChild = parentLi.firstChild;
-                if (firstChild && firstChild.nodeType === 3) {
-                    firstChild.remove();
-                }
+                if (firstChild && firstChild.nodeType === 3) firstChild.remove();
                 parentLi.insertBefore(toggler, parentLi.firstChild);
                 toggler.addEventListener("click", function(e) {
                     e.stopPropagation();
@@ -37,7 +32,6 @@
                         var isOpen = childUl.style.display !== "none";
                         childUl.style.display = isOpen ? "none" : "block";
                         toggler.textContent = isOpen ? "\u25B6" : "\u25BC";
-                        toggler.style.transform = isOpen ? "rotate(0deg)" : "rotate(0deg)";
                     }
                 });
             }

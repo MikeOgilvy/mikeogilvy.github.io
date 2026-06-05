@@ -603,7 +603,8 @@ SGConv layers    ← Linear weights updated; gradients flow along GO/coexpr edge
 </article>
     </main><aside id="toc-sidebar">
     <div class="toc-sidebar-header" style="padding: 16px 16px 16px 16px;">On This Page</div>
-    <nav class="toc-sidebar-nav"><nav id="TableOfContents">
+    <nav class="toc-sidebar-nav">
+        <nav id="TableOfContents">
   <ul>
     <li><a href="#the-problem">The Problem</a></li>
     <li><a href="#what-gears-is">What GEARS Is</a></li>
@@ -632,7 +633,8 @@ SGConv layers    ← Linear weights updated; gradients flow along GO/coexpr edge
     <li><a href="#what-gears-cannot-do-yet">What GEARS Cannot Do (Yet)</a></li>
     <li><a href="#references">References</a></li>
   </ul>
-</nav></nav>
+</nav>
+    </nav>
 </aside>
 <script>
     (function() {
@@ -650,9 +652,7 @@ SGConv layers    ← Linear weights updated; gradients flow along GO/coexpr edge
                 toggler.textContent = "\u25B6";
                 toggler.style.cssText = "cursor:pointer;margin-right:4px;font-size:10px;display:inline-block;transition:transform 0.2s;";
                 var firstChild = parentLi.firstChild;
-                if (firstChild && firstChild.nodeType === 3) {
-                    firstChild.remove();
-                }
+                if (firstChild && firstChild.nodeType === 3) firstChild.remove();
                 parentLi.insertBefore(toggler, parentLi.firstChild);
                 toggler.addEventListener("click", function(e) {
                     e.stopPropagation();
@@ -662,7 +662,6 @@ SGConv layers    ← Linear weights updated; gradients flow along GO/coexpr edge
                         var isOpen = childUl.style.display !== "none";
                         childUl.style.display = isOpen ? "none" : "block";
                         toggler.textContent = isOpen ? "\u25B6" : "\u25BC";
-                        toggler.style.transform = isOpen ? "rotate(0deg)" : "rotate(0deg)";
                     }
                 });
             }
