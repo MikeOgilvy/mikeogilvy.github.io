@@ -1,13 +1,11 @@
 {{- if and (not .IsHome) (or (ne .Section "photography") (and (eq .Section "photography") (not .IsPage))) -}}
-<aside id="dynamic-profile" class="floating-profile" style="visibility: hidden; position: fixed !important; z-index: 999999 !important;">
+<aside id="dynamic-profile" class="floating-profile" style="opacity: 0; position: fixed !important; z-index: 999999 !important; transition: opacity 0.3s;">
     <div class="profile-content">
         <a href="/" title="Home">
             <img src="/Blog/Avatar.jpg" alt="Avatar" style="width: 85px !important; height: 85px !important; object-fit: cover; border-radius: 50% !important; display: block; margin: 0 auto 10px; border: 2px solid var(--border);">
         </a>
-        
         <h3 style="margin: 12px 0 5px; font-size: 1.1rem; text-align: center; color: var(--primary);">Mike Ogilvy</h3>
         <p style="font-size: 0.9rem; color: var(--secondary); text-align: center; line-height: 1.4; padding: 0 10px; margin-bottom: 15px;">Recording life, technology and essays</p>
-        
         <div class="floating-social" style="display: flex; gap: 14px; justify-content: center; margin-bottom: 20px;">
             {{- range .Site.Params.socialIcons }}
             <a href="{{ .url }}" target="_blank" rel="noopener noreferrer" title="{{ .name }}" style="color: var(--secondary); transition: 0.2s; display: flex; align-items: center;">
@@ -25,21 +23,18 @@
             </a>
             {{- end }}
         </div>
-
         <div id="mini-calendar" style="width: 175px; margin: 0 auto; background: var(--theme); border: 1px solid var(--border); border-radius: 10px; padding: 10px; box-sizing: border-box;">
             <div id="cal-header" style="text-align: center; font-size: 0.7rem; font-weight: 800; margin-bottom: 10px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px;"></div>
             <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; text-align: center; font-size: 0.6rem; color: #14b30f; font-weight: bold; margin-bottom: 5px;">
                 <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
             </div>
-            <div id="cal-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; text-align: center; font-size: 0.65rem; color: var(--primary);">
-                </div>
+            <div id="cal-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; text-align: center; font-size: 0.65rem; color: var(--primary);"></div>
         </div>
     </div>
     <div id="visitor-map" style="width: 175px; margin: 15px auto 0; background: var(--theme); border: 1px solid var(--border); border-radius: 10px; padding: 10px; box-sizing: border-box;">
-            <div style="text-align: center; font-size: 0.7rem; font-weight: 800; margin-bottom: 8px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px;">World Visitors</div>
-            <div style="width: 100%; border-radius: 5px; overflow: hidden; filter: hue-rotate(288deg) brightness(0.9) contrast(1.0);">
-                <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=IpefWSQAVIpB3az28sIhvNAOep68N38OOIadTlGr_P4"></script>
-            </div>
+        <div style="text-align: center; font-size: 0.7rem; font-weight: 800; margin-bottom: 8px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px;">World Visitors</div>
+        <div style="width: 100%; border-radius: 5px; overflow: hidden; filter: hue-rotate(288deg) brightness(0.9) contrast(1.0);">
+            <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=IpefWSQAVIpB3az28sIhvNAOep68N38OOIadTlGr_P4"></script>
         </div>
     </div>
 </aside>
@@ -78,20 +73,20 @@
         function updatePosition() {
             const mainContent = document.querySelector(".main");
             if (!mainContent || window.innerWidth < 1350) {
-                profile.style.visibility = "hidden";
+                profile.style.opacity = "0";
                 return;
             }
             const rect = mainContent.getBoundingClientRect();
             profile.style.left = (rect.left - 240) + "px"; 
             profile.style.top = "150px";
             profile.style.width = "200px";
-            profile.style.visibility = "visible";
+            profile.style.opacity = "1";
         }
 
-        document.body.appendChild(profile);
         renderCalendar();
         updatePosition();
         window.addEventListener("resize", updatePosition);
+        window.addEventListener("scroll", updatePosition);
     })();
 </script>
 {{- end -}}

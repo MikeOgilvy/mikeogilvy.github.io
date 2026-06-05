@@ -46,11 +46,15 @@
 .paginav a,
 .paginav span:not(.title),
 .footer a,
-.top-link,
 .toc a,
 .terms-tags a,
 .button {
     transition: background 0.1s, color 0.1s, box-shadow 0.1s;
+}
+
+/* 回到顶部按钮：始终悬浮可见 */
+.top-link {
+    display: none;
 }
 
 ::-webkit-scrollbar-thumb {

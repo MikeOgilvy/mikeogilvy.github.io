@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><script src="/blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=blog/livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><script src="/Blog/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=Blog/livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -11,16 +11,16 @@
 Abstract
 Single-cell RNA sequencing (scRNA-seq) has become an essential technique for studying cellular heterogeneity and complex biological systems. During this winter research training, I systematically studied the general workflow and analytical principles of scRNA-seq based on Single Cell Best Practices and related resources, covering key steps such as data preprocessing, quality control, normalization, dimensionality reduction, clustering, and cell type annotation. To consolidate the knowledge, I first reproduced a complete analysis pipeline using publicly available immune cell data to familiarize myself with standard procedures and tools, then independently applied the same workflow to a publicly available human brain infection-related single-cell dataset, identifying distinct cell populations and infection-associated transcriptional changes across cell types. Overall, this training deepened my understanding of scRNA-seq data analysis, demonstrated the adaptability of standardized workflows to diverse biological contexts, and provided preliminary insights into cellular responses in infected human brain tissue as a foundation for further studies.">
 <meta name="author" content="Mike">
-<link rel="canonical" href="http://localhost:1313/blog/posts/single-cell/learning-and-practice-of-single-cell-sequencing/">
-<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.0f34a32348cb86f7d6cd1ed3cbeef508e43ab17596b82f7d529382994005c36b.css" integrity="sha256-DzSjI0jLhvfWzR7Ty&#43;71COQ6sXWWuC99UpOCmUAFw2s=" rel="preload stylesheet" as="style">
+<link rel="canonical" href="http://localhost:1313/Blog/posts/single-cell/learning-and-practice-of-single-cell-sequencing/">
+<link crossorigin="anonymous" href="/Blog/assets/css/stylesheet.57f77d1ad7b2edef6248b41950f9c7a8bdb523981470c861c4952437f5008580.css" integrity="sha256-V/d9Gtey7e9iSLQZUPnHqL21I5gUcMhhxJUkN/UAhYA=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/ico/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/blog/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/blog/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/blog/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/blog/safari-pinned-tab.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/Blog/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/Blog/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/Blog/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/Blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/blog/posts/single-cell/learning-and-practice-of-single-cell-sequencing/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/Blog/posts/single-cell/learning-and-practice-of-single-cell-sequencing/">
 <noscript>
     <style>
         #theme-toggle,
@@ -89,7 +89,7 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 <style>
      
-    #top, .main, .post-single, .list-header {
+    .main, .post-single, .list-header {
         animation: smooth-entry 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
         opacity: 0;
         will-change: transform, opacity;
@@ -124,7 +124,7 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
         }
     });
 </script>
-<meta property="og:url" content="http://localhost:1313/blog/posts/single-cell/learning-and-practice-of-single-cell-sequencing/">
+<meta property="og:url" content="http://localhost:1313/Blog/posts/single-cell/learning-and-practice-of-single-cell-sequencing/">
   <meta property="og:site_name" content="Mike&#39;s Blog">
   <meta property="og:title" content="Learning and Practice of Single-Cell Sequencing">
   <meta property="og:description" content="Abstract Single-cell RNA sequencing (scRNA-seq) has become an essential technique for studying cellular heterogeneity and complex biological systems. During this winter research training, I systematically studied the general workflow and analytical principles of scRNA-seq based on Single Cell Best Practices and related resources, covering key steps such as data preprocessing, quality control, normalization, dimensionality reduction, clustering, and cell type annotation. To consolidate the knowledge, I first reproduced a complete analysis pipeline using publicly available immune cell data to familiarize myself with standard procedures and tools, then independently applied the same workflow to a publicly available human brain infection-related single-cell dataset, identifying distinct cell populations and infection-associated transcriptional changes across cell types. Overall, this training deepened my understanding of scRNA-seq data analysis, demonstrated the adaptability of standardized workflows to diverse biological contexts, and provided preliminary insights into cellular responses in infected human brain tissue as a foundation for further studies.">
@@ -149,13 +149,13 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "http://localhost:1313/blog/posts/"
+      "item": "http://localhost:1313/Blog/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Learning and Practice of Single-Cell Sequencing",
-      "item": "http://localhost:1313/blog/posts/single-cell/learning-and-practice-of-single-cell-sequencing/"
+      "item": "http://localhost:1313/Blog/posts/single-cell/learning-and-practice-of-single-cell-sequencing/"
     }
   ]
 }
@@ -181,7 +181,7 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:1313/blog/posts/single-cell/learning-and-practice-of-single-cell-sequencing/"
+    "@id": "http://localhost:1313/Blog/posts/single-cell/learning-and-practice-of-single-cell-sequencing/"
   },
   "publisher": {
     "@type": "Organization",
@@ -194,11 +194,10 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
 }
 </script>
 </head>
-<body id="top">
-    <header class="header">
+<body id="top"><a href="#top" id="back-to-top" style="position:fixed;bottom:80px;right:30px;z-index:9999;width:44px;height:44px;border-radius:50%;background:var(--tertiary);display:flex;align-items:center;justify-content:center;opacity:0.6;transition:opacity 0.3s,transform 0.2s;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.15)" title="Back to top"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><polyline points="18 15 12 9 6 15"></polyline></svg></a><header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="http://localhost:1313/blog/" accesskey="h" title="Mike&#39;s Blog (Alt + H)">Mike&#39;s Blog</a>
+            <a href="http://localhost:1313/Blog/" accesskey="h" title="Mike&#39;s Blog (Alt + H)">Mike&#39;s Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -224,37 +223,37 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
         </div>
         <ul id="menu">
             <li>
-                <a href="http://localhost:1313/blog/" title="Home">
+                <a href="http://localhost:1313/Blog/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/blog/posts/" title="Posts">
+                <a href="http://localhost:1313/Blog/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/blog/photography/" title="Photography">
+                <a href="http://localhost:1313/Blog/photography/" title="Photography">
                     <span>Photography</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/blog/archives/" title="Archive">
+                <a href="http://localhost:1313/Blog/archives/" title="Archive">
                     <span>Archive</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/blog/friends" title="Friends">
+                <a href="http://localhost:1313/Blog/friends" title="Friends">
                     <span>Friends</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/blog/tags/" title="Tags">
+                <a href="http://localhost:1313/Blog/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/blog/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/Blog/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -265,7 +264,7 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="http://localhost:1313/blog/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/blog/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/Blog/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/Blog/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Learning and Practice of Single-Cell Sequencing
     </h1>
@@ -351,7 +350,7 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
 <h2 id="learning-resources-and-workflow-design">Learning Resources and Workflow Design<a hidden class="anchor" aria-hidden="true" href="#learning-resources-and-workflow-design">#</a></h2>
 <p>To design an appropriate analysis workflow, the overall strategy was developed based on the guidelines provided by Single Cell Best Practices <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>, with particular emphasis on rigorous data quality assessment, batch effect evaluation, and flexible downstream analysis.</p>
 <figure id="fig-sc-workflow" style="float:right; width:420px; margin-left:20px;">
-  <img src="https://raw.githubusercontent.com/MikeOgilvy/blog/refs/heads/main/public/posts/Single%20Cell/single_cell_workflow_even_bigger.png">
+  <img src="https://raw.githubusercontent.com/MikeOgilvy/Blog/refs/heads/main/public/posts/Single%20Cell/single_cell_workflow_even_bigger.png">
   <figcaption >
     <strong>Figure 1. Single-cell RNA-seq analysis workflow.</strong> The adaptive strategy branches based on the presence of batch effects: scVI/scANVI for batch-aware integration and semi-supervised annotation (left branch), versus standard PCA-based analysis with CellTypist or marker-based annotation (right branch).
   </figcaption>
@@ -380,7 +379,7 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
 <p>Post-filtering, QC scatter plots were regenerated to confirm the effectiveness of the filtering procedure.</p>
 <p>After cell-level filtering, raw count data were preserved in a dedicated data layer to maintain access to untransformed counts for downstream modeling and correction steps.</p>
 <figure id="fig-qc">
-  <img src="https://raw.githubusercontent.com/MikeOgilvy/blog/refs/heads/main/content/posts/Single%20Cell/qc.png">
+  <img src="https://raw.githubusercontent.com/MikeOgilvy/Blog/refs/heads/main/content/posts/Single%20Cell/qc.png">
   <figcaption>
     <strong>Figure 2. Quality control of single-cell RNA-seq data. a</strong>  Violin plots showing the distributions of the number of detected genes, total UMI counts, and mitochondrial gene percentages prior to filtering. <strong>b </strong>Scatter plot of total UMI counts versus mitochondrial gene percentage before quality control. <strong>c </strong> Scatter plot of total UMI counts versus the number of detected genes before filtering. <strong>d </strong> Scatter plot of total UMI counts versus the number of detected genes after quality control.
   </figcaption>
@@ -411,7 +410,7 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
 <p>To validate the correctness and robustness of the proposed downstream analysis workflow, we first applied it to a well-characterized immune cell dataset and evaluated the results based on clustering structure and cell type annotation outcomes. Immune cell datasets serve as a standard benchmark due to their well-defined transcriptional heterogeneity and established cell type markers.</p>
 <p>Low-dimensional representations learned through PCA (linear dimensionality reduction) and scVI (non-linear generative modeling) produced clear and biologically meaningful cellular clusters in the UMAP embeddings, shown in Figure<sup><a href="#fig-leiden">3</a></sup>. The Leiden clustering results showed moderate similarity between the two approaches, with an estimated Adjusted Rand Index (ARI) of approximately 0.60. While PCA-based clustering yielded a larger number of clusters (15 vs. 11 for scVI) and finer subcluster separation, scVI-based clustering produced more compact clusters with sharper boundaries. These differences primarily arise from the distinct methodological properties of the two representation learning strategies—PCA captures maximal variance in a linear manner, whereas scVI models raw counts through a probabilistic framework that accounts for technical variability and non-linear relationships. Despite these variations in cluster number and boundary definition, the overall topological structure and major cell population distributions remained largely consistent, supporting the robustness of the workflow across different representation learning approaches.</p>
 <figure id="fig-leiden">
-  <img src="https://raw.githubusercontent.com/MikeOgilvy/blog/refs/heads/main/content/posts/Single%20Cell/leiden.png">
+  <img src="https://raw.githubusercontent.com/MikeOgilvy/Blog/refs/heads/main/content/posts/Single%20Cell/leiden.png">
   <figcaption>
     <strong>Figure 3.UMAP embeddings and Leiden clustering results from two representation learning strategies on the immune cell dataset. a</strong>  UMAP visualization colored by Leiden clusters obtained from PCA-based dimensionality reduction (15 clusters). <strong>b </strong>UMAP visualization colored by Leiden clusters obtained from scVI-based latent representation (11 clusters). 
   </figcaption>
@@ -420,7 +419,7 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
 <p>The standard PCA-based workflow produced a complete set of immune cell type labels with clear spatial separation in the UMAP embedding, as shown in Figure<sup><a href="#fig-annotation">4</a></sup>a. These annotations were consistent with known immune cell transcriptional structure and established marker gene patterns. In parallel, the scVI&ndash;scANVI workflow yielded a comparable global annotation landscape in the scVI latent space, shown in Figure<sup><a href="#fig-annotation">4</a></sup>b, while additionally providing posterior probability estimates that explicitly quantified prediction uncertainty, illustrated in Figure<sup><a href="#fig-annotation">4</a></sup>c. Cells with lower prediction confidence were primarily localized at cluster boundaries or transitional regions, indicating appropriate uncertainty modeling rather than overconfident label assignment.</p>
 <p>Despite differences in representation learning strategies and neighborhood graph construction, the two workflows exhibited a high degree of concordance in major immune cell type assignments. This agreement is visualized in Figure<sup><a href="#fig-annotation">4</a></sup>d, where concordant and discordant annotations between workflows are highlighted. Discrepancies were restricted to a limited subset of cells and did not alter the overall biological interpretation. Together, these results demonstrate that both the standard and batch-aware workflows reliably recover consistent and biologically coherent cell type annotations in a benchmark immune cell dataset, supporting the correctness and flexibility of the proposed analysis framework.</p>
 <figure id="fig-annotation">
-  <img src="https://raw.githubusercontent.com/MikeOgilvy/blog/refs/heads/main/content/posts/Single%20Cell/annotation.png">
+  <img src="https://raw.githubusercontent.com/MikeOgilvy/Blog/refs/heads/main/content/posts/Single%20Cell/annotation.png">
   <figcaption>
     <strong>Figure 4. Workflow-level comparison of cell type annotation strategies on immune cell data. a</strong>   Cell type annotation obtained using a standard analysis workflow based on PCA-derived neighborhood graphs followed by automated CellTypist prediction. <strong>b </strong> Final cell type assignments produced by a semi-supervised scANVI model trained on the scVI latent representation. <strong>c </strong> Maximum posterior probability of scANVI predictions, highlighting annotation confidence and cells with ambiguous assignments. <strong>d </strong> Annotation agreement across workflows, indicating concordant and discordant cell type labels between the PCA-based CellTypist workflow and the scVI--scANVI workflow; low-confidence scANVI predictions were excluded from this comparison.
   </figcaption>
@@ -430,7 +429,7 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
 <p>This annotation yielded seven major cell types with clear spatial separation in UMAP embeddings, as shown in Figure<sup><a href="#fig-brain-annotation">5</a></sup>. Quantitative comparison of cell type proportions revealed infection-specific shifts relative to the NBH control. Both MV1 and MV2 conditions exhibited a marked increase in excitatory neurons (41.1% in MV1 and 39.4% in MV2 versus 34.5% in NBH) and a corresponding decrease in intermediate progenitor cells (7.0% in MV1 and 5.2% in MV2 versus 13.8% in NBH) and proliferating cells (4.4% in MV1 and 3.4% in MV2 versus 5.9% in NBH). MV2 additionally showed an elevated proportion of inhibitory neurons (13.1% versus 9.9% in NBH). In contrast, astrocyte-like cells and OPCs displayed only modest changes across conditions.</p>
 <p>These compositional shifts, evident in both proportional quantification and spatial distribution on UMAP embeddings, as shown in Figure<sup><a href="#fig-brain-annotation">5</a></sup>, suggest that prion infection promotes neuronal differentiation or selective survival of neuronal lineages at the expense of progenitor and proliferative populations. The observed patterns provide a cellular context for interpreting infection-induced transcriptional responses in subsequent analyses.</p>
 <figure id="fig-brain-annotation">
-  <img src="https://raw.githubusercontent.com/MikeOgilvy/blog/refs/heads/main/content/posts/Single%20Cell/brain_annotation.png">
+  <img src="https://raw.githubusercontent.com/MikeOgilvy/Blog/refs/heads/main/content/posts/Single%20Cell/brain_annotation.png">
   <figcaption>
     <strong>Figure 5.Cell type annotation and compositional shifts in MV1, MV2, and NBH conditions. </strong> Left to right: UMAP embeddings colored by cell type for MV1, MV2, and NBH groups. Major populations include radial glia/neural progenitors, intermediate progenitors (IPC), excitatory and inhibitory neurons, astrocyte-like cells, OPCs, and proliferating cells. Quantitative proportions are summarized in Supplementary Table.
   </figcaption>
@@ -442,7 +441,7 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
 <p>Notably, oligodendrocyte precursor cells represented an exception to the global MV2 response, exhibiting downregulation of <em>TTR</em> and a broader suppression of transcriptional activity, highlighting cell type&ndash;specific sensitivity to infection-associated signals.</p>
 <p>Collectively, these results indicate that MV1 infection predominantly induces transcriptional programs associated with neuronal activation, structural remodeling, and altered progenitor differentiation, whereas MV2 infection elicits a distinct response dominated by a <em>TTR</em>-centered, broadly shared transcriptional signature suggestive of enhanced secretory or extracellular signaling processes. These findings, as illustrated in Figure<sup><a href="#fig-infection">6</a></sup>, underscore the presence of infection-specific and cell type&ndash;dependent molecular responses within the neural cellular landscape.</p>
 <figure id="fig-infection">
-  <img src="https://raw.githubusercontent.com/MikeOgilvy/blog/refs/heads/main/content/posts/Single%20Cell/infection_signature_dotplot.png">
+  <img src="https://raw.githubusercontent.com/MikeOgilvy/Blog/refs/heads/main/content/posts/Single%20Cell/infection_signature_dotplot.png">
   <figcaption>
     <strong>Figure 6. Infection-associated transcriptional signatures across major cell populations. </strong> Dot size indicates the fraction of expressing cells within each group, while color intensity represents mean normalized expression level. MV1 induces upregulation of cytoskeletal remodeling and neuronal activation genes (e.g. <i>MARCKSL1</i>, <i>STMN1</i>, <i>TUBB3</i>, <i>ACTG1</i>) primarily in excitatory and inhibitory neurons. In contrast, MV2 elicits a widespread upregulation of <i>TTR</i> across nearly all cell types, accompanied by moderate changes in stress-response and secretion-related genes.
   </figcaption>
@@ -476,15 +475,15 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/blog/tags/single-cell/">Single Cell</a></li>
+      <li><a href="http://localhost:1313/Blog/tags/single-cell/">Single Cell</a></li>
     </ul>
 <nav class="paginav">
-  <a class="prev" href="http://localhost:1313/blog/posts/ml/ml---1/">
+  <a class="prev" href="http://localhost:1313/Blog/posts/ml/ml---1/">
     <span class="title">« Prev</span>
     <br>
     <span>ML-1 Note: Supervised Learning; Linear Regression</span>
   </a>
-  <a class="next" href="http://localhost:1313/blog/posts/hello-world/hello-world/">
+  <a class="next" href="http://localhost:1313/Blog/posts/hello-world/hello-world/">
     <span class="title">Next »</span>
     <br>
     <span>Hello World</span>
@@ -492,7 +491,7 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
 </nav>
 
   </footer><script src="https://giscus.app/client.js"
-        data-repo="MikeOgilvy/blog"
+        data-repo="MikeOgilvy/Blog"
         data-repo-id="R_kgDORiHktA"
         data-category="Announcements"
         data-category-id="DIC_kwDORiHktM4C4Ege"
@@ -510,7 +509,7 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/blog/">Mike&#39;s Blog</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/Blog/">Mike&#39;s Blog</a></span> · 
 
     <span>
         Powered by
@@ -522,36 +521,31 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
         <path d="M12 6H0l6-6z" />
     </svg>
-</a><aside id="dynamic-profile" class="floating-profile" style="visibility: hidden; position: fixed !important; z-index: 999999 !important;">
+</a><aside id="dynamic-profile" class="floating-profile" style="opacity: 0; position: fixed !important; z-index: 999999 !important; transition: opacity 0.3s;">
     <div class="profile-content">
         <a href="/" title="Home">
-            <img src="/blog/Avatar.jpg" alt="Avatar" style="width: 85px !important; height: 85px !important; object-fit: cover; border-radius: 50% !important; display: block; margin: 0 auto 10px; border: 2px solid var(--border);">
+            <img src="/Blog/Avatar.jpg" alt="Avatar" style="width: 85px !important; height: 85px !important; object-fit: cover; border-radius: 50% !important; display: block; margin: 0 auto 10px; border: 2px solid var(--border);">
         </a>
-        
         <h3 style="margin: 12px 0 5px; font-size: 1.1rem; text-align: center; color: var(--primary);">Mike Ogilvy</h3>
         <p style="font-size: 0.9rem; color: var(--secondary); text-align: center; line-height: 1.4; padding: 0 10px; margin-bottom: 15px;">Recording life, technology and essays</p>
-        
         <div class="floating-social" style="display: flex; gap: 14px; justify-content: center; margin-bottom: 20px;">
             <a href="https://github.com/MikeOgilvy" target="_blank" rel="noopener noreferrer" title="github" style="color: var(--secondary); transition: 0.2s; display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
             <a href="https://x.com/MikeOgilvy94" target="_blank" rel="noopener noreferrer" title="X" style="color: var(--secondary); transition: 0.2s; display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"></path><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path></svg></a>
-            <a href="https://t.me/MikeOgilvy" target="_blank" rel="noopener noreferrer" title="Telegram" style="color: var(--secondary); transition: 0.2s; display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg></a>
+            <a href="https://t.me/MikeOgilvy" target="_blank" rel="noopener noreferrer" title="Telegram" style="color: var(--secondary); transition: 0.2s; display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.509 1.793.997 3.592 1.48 5.388.16.36.506.494.864.498l-.002.018s.281.028.555-.038a2.1 2.1 0 0 0 .933-.517c.345-.324 1.28-1.244 1.811-1.764l3.999 2.952.032.018s.442.311 1.09.355c.324.022.75-.04 1.116-.308.37-.27.613-.702.728-1.196.342-1.492 2.61-12.285 2.997-14.072l-.01.042c.27-1.006.17-1.928-.455-2.474a1.654 1.654 0 0 0-1.034-.407z" /></svg></a>
             <a href="mailto:mikeogilvy25@gmail.com" target="_blank" rel="noopener noreferrer" title="Email" style="color: var(--secondary); transition: 0.2s; display: flex; align-items: center;"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
         </div>
-
         <div id="mini-calendar" style="width: 175px; margin: 0 auto; background: var(--theme); border: 1px solid var(--border); border-radius: 10px; padding: 10px; box-sizing: border-box;">
             <div id="cal-header" style="text-align: center; font-size: 0.7rem; font-weight: 800; margin-bottom: 10px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px;"></div>
             <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; text-align: center; font-size: 0.6rem; color: #14b30f; font-weight: bold; margin-bottom: 5px;">
                 <span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span>
             </div>
-            <div id="cal-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; text-align: center; font-size: 0.65rem; color: var(--primary);">
-                </div>
+            <div id="cal-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; text-align: center; font-size: 0.65rem; color: var(--primary);"></div>
         </div>
     </div>
     <div id="visitor-map" style="width: 175px; margin: 15px auto 0; background: var(--theme); border: 1px solid var(--border); border-radius: 10px; padding: 10px; box-sizing: border-box;">
-            <div style="text-align: center; font-size: 0.7rem; font-weight: 800; margin-bottom: 8px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px;">World Visitors</div>
-            <div style="width: 100%; border-radius: 5px; overflow: hidden; filter: hue-rotate(288deg) brightness(0.9) contrast(1.0);">
-                <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=IpefWSQAVIpB3az28sIhvNAOep68N38OOIadTlGr_P4"></script>
-            </div>
+        <div style="text-align: center; font-size: 0.7rem; font-weight: 800; margin-bottom: 8px; color: var(--primary); text-transform: uppercase; letter-spacing: 0.5px;">World Visitors</div>
+        <div style="width: 100%; border-radius: 5px; overflow: hidden; filter: hue-rotate(288deg) brightness(0.9) contrast(1.0);">
+            <script type="text/javascript" id="mmvst_globe" src="//mapmyvisitors.com/globe.js?d=IpefWSQAVIpB3az28sIhvNAOep68N38OOIadTlGr_P4"></script>
         </div>
     </div>
 </aside>
@@ -590,20 +584,20 @@ Single-cell RNA sequencing (scRNA-seq) has become an essential technique for stu
         function updatePosition() {
             const mainContent = document.querySelector(".main");
             if (!mainContent || window.innerWidth < 1350) {
-                profile.style.visibility = "hidden";
+                profile.style.opacity = "0";
                 return;
             }
             const rect = mainContent.getBoundingClientRect();
             profile.style.left = (rect.left - 240) + "px"; 
             profile.style.top = "150px";
             profile.style.width = "200px";
-            profile.style.visibility = "visible";
+            profile.style.opacity = "1";
         }
 
-        document.body.appendChild(profile);
         renderCalendar();
         updatePosition();
         window.addEventListener("resize", updatePosition);
+        window.addEventListener("scroll", updatePosition);
     })();
 </script><script>
     document.addEventListener("DOMContentLoaded", function() {
