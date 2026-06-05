@@ -70,6 +70,21 @@
     transform: scale(0.96);
 }
 
+/* 顶部导航动效 */
+#menu a {
+    transition: color 0.1s;
+    display: inline-block;
+}
+#menu a:hover {
+    opacity: 0.7;
+}
+#menu a:active {
+    transform: scale(0.96);
+}
+#menu .active {
+    transition: border-bottom-color 0.1s;
+}
+
 /* 摄影网格布局 */
 .photo-grid {
     display: grid;
