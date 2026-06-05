@@ -1,4 +1,4 @@
-baseURL = "https://mikeogilvy.github.io/Blog/"
+baseURL = "https://mikeogilvy.github.io/"
 languageCode = "zh-cn"
 title = "Mike's Blog"
 theme = "PaperMod"
@@ -21,14 +21,14 @@ paginate = 5
   ShowPostNavLinks = true
 
 [label]
-  icon = "https://mikeogilvy.github.io/Blog/Avatar.jpg"
+  icon = "https://mikeogilvy.github.io/Avatar.jpg"
   iconHeight = 35
 
 [params.profileMode]
   enabled = true
   title = "Mike Ogilvy "
   subtitle = "<span class='description'></span>"
-  imageUrl = "https://mikeogilvy.github.io/Blog/Avatar.jpg"
+  imageUrl = "https://mikeogilvy.github.io/Avatar.jpg"
   imageWidth = 120
   imageHeight = 120
 

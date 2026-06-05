@@ -15,6 +15,6 @@ comments: false
 Welcome! Contact me via [email](mailto:mikeogilvy25@gmail.com)
 
 + **Name:** Mike Ogilvy
-+ **URL:** https://mikeogilvy.github.io/Blog
-+ **Avatar:** https://mikeogilvy.github.io/Blog/Avatar.jpg
++ **URL:** https://mikeogilvy.github.io
++ **Avatar:** https://mikeogilvy.github.io/Avatar.jpg
 + **Bio:**  Recording life, technology and essays.

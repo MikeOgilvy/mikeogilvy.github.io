@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Mike&#39;s Blog</title>
-    <link>http://localhost:1313/Blog/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Mike&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
     <lastBuildDate>Fri, 05 Jun 2026 07:19:29 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/Blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GEARS Explained: How Graph Neural Networks Predict the Unseen</title>
-      <link>http://localhost:1313/Blog/posts/gears/gears_explained/</link>
+      <link>http://localhost:1313/posts/gears/gears_explained/</link>
       <pubDate>Fri, 05 Jun 2026 07:19:29 +0800</pubDate>
-      <guid>http://localhost:1313/Blog/posts/gears/gears_explained/</guid>
+      <guid>http://localhost:1313/posts/gears/gears_explained/</guid>
       <description>&lt;h1 id=&#34;gears-explained-how-graph-neural-networks-predict-the-unseen&#34;&gt;GEARS Explained: How Graph Neural Networks Predict the Unseen&lt;/h1&gt;
 &lt;p&gt;&lt;em&gt;A deep dive into the model that can forecast what happens when you knock out genes nobody has ever touched.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -21,16 +21,16 @@
     </item>
     <item>
       <title>Qingshan Lake</title>
-      <link>http://localhost:1313/Blog/photography/qingshanlake/</link>
+      <link>http://localhost:1313/photography/qingshanlake/</link>
       <pubDate>Mon, 06 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Blog/photography/qingshanlake/</guid>
+      <guid>http://localhost:1313/photography/qingshanlake/</guid>
       <description>A collection of shots from my trip to the Golden State.</description>
     </item>
     <item>
       <title>ML-2 Note: Linear Models for Classification and GLMs</title>
-      <link>http://localhost:1313/Blog/posts/ml/ml---2/</link>
+      <link>http://localhost:1313/posts/ml/ml---2/</link>
       <pubDate>Sat, 28 Mar 2026 02:24:29 +0800</pubDate>
-      <guid>http://localhost:1313/Blog/posts/ml/ml---2/</guid>
+      <guid>http://localhost:1313/posts/ml/ml---2/</guid>
       <description>&lt;h1 id=&#34;ml-2-note-linear-models-for-classification-and-glms&#34;&gt;ML-2 Note: Linear Models for Classification and GLMs&lt;/h1&gt;
 &lt;h2 id=&#34;1-why-classification-uses-logistic-regression&#34;&gt;1. Why Classification Uses Logistic Regression&lt;/h2&gt;
 &lt;p&gt;In classification problems, the target variable is discrete.&lt;/p&gt;
@@ -51,9 +51,9 @@
     </item>
     <item>
       <title>ML-1 Note: Supervised Learning; Linear Regression</title>
-      <link>http://localhost:1313/Blog/posts/ml/ml---1/</link>
+      <link>http://localhost:1313/posts/ml/ml---1/</link>
       <pubDate>Sun, 22 Mar 2026 03:32:29 +0800</pubDate>
-      <guid>http://localhost:1313/Blog/posts/ml/ml---1/</guid>
+      <guid>http://localhost:1313/posts/ml/ml---1/</guid>
       <description>&lt;h1 id=&#34;ml-1-note-supervised-learning-linear-regression&#34;&gt;ML-1 Note: Supervised Learning; Linear Regression&lt;/h1&gt;
 &lt;h2 id=&#34;1-basic-model-of-linear-regression&#34;&gt;1. Basic Model of Linear Regression&lt;/h2&gt;
 &lt;p&gt;Linear Regression is one of the simplest and most fundamental models in &lt;strong&gt;supervised learning&lt;/strong&gt;.&lt;br&gt;
@@ -81,9 +81,9 @@ y = w^T x + b
     </item>
     <item>
       <title>Learning and Practice of Single-Cell Sequencing</title>
-      <link>http://localhost:1313/Blog/posts/single-cell/learning-and-practice-of-single-cell-sequencing/</link>
+      <link>http://localhost:1313/posts/single-cell/learning-and-practice-of-single-cell-sequencing/</link>
       <pubDate>Mon, 09 Mar 2026 16:09:29 +0800</pubDate>
-      <guid>http://localhost:1313/Blog/posts/single-cell/learning-and-practice-of-single-cell-sequencing/</guid>
+      <guid>http://localhost:1313/posts/single-cell/learning-and-practice-of-single-cell-sequencing/</guid>
       <description>&lt;div style=&#34;
   text-align: justify;
   line-height: 1.6;
@@ -96,16 +96,16 @@ y = w^T x + b
     </item>
     <item>
       <title>Hello World</title>
-      <link>http://localhost:1313/Blog/posts/hello-world/hello-world/</link>
+      <link>http://localhost:1313/posts/hello-world/hello-world/</link>
       <pubDate>Sat, 07 Mar 2026 16:09:29 +0800</pubDate>
-      <guid>http://localhost:1313/Blog/posts/hello-world/hello-world/</guid>
+      <guid>http://localhost:1313/posts/hello-world/hello-world/</guid>
       <description></description>
     </item>
     <item>
       <title>Friend Link</title>
-      <link>http://localhost:1313/Blog/friends/</link>
+      <link>http://localhost:1313/friends/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/Blog/friends/</guid>
+      <guid>http://localhost:1313/friends/</guid>
       <description>My Friends</description>
     </item>
   </channel>

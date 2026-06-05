@@ -32,7 +32,7 @@ This training aimed to strengthen my understanding of scRNA-seq data analysis an
 To design an appropriate analysis workflow, the overall strategy was developed based on the guidelines provided by Single Cell Best Practices [^1], with particular emphasis on rigorous data quality assessment, batch effect evaluation, and flexible downstream analysis.
 
 <figure id="fig-sc-workflow" style="float:right; width:420px; margin-left:20px;">
-  <img src="https://raw.githubusercontent.com/MikeOgilvy/Blog/refs/heads/main/public/posts/Single%20Cell/single_cell_workflow_even_bigger.png">
+  <img src="https://raw.githubusercontent.com/MikeOgilvy/mikeogilvy.github.io/refs/heads/main/public/posts/Single%20Cell/single_cell_workflow_even_bigger.png">
   <figcaption >
     <strong>Figure 1. Single-cell RNA-seq analysis workflow.</strong> The adaptive strategy branches based on the presence of batch effects: scVI/scANVI for batch-aware integration and semi-supervised annotation (left branch), versus standard PCA-based analysis with CellTypist or marker-based annotation (right branch).
   </figcaption>
@@ -85,7 +85,7 @@ Post-filtering, QC scatter plots were regenerated to confirm the effectiveness o
 After cell-level filtering, raw count data were preserved in a dedicated data layer to maintain access to untransformed counts for downstream modeling and correction steps.
 
 <figure id="fig-qc">
-  <img src="https://raw.githubusercontent.com/MikeOgilvy/Blog/refs/heads/main/content/posts/Single%20Cell/qc.png">
+  <img src="https://raw.githubusercontent.com/MikeOgilvy/mikeogilvy.github.io/refs/heads/main/content/posts/Single%20Cell/qc.png">
   <figcaption>
     <strong>Figure 2. Quality control of single-cell RNA-seq data. a</strong>  Violin plots showing the distributions of the number of detected genes, total UMI counts, and mitochondrial gene percentages prior to filtering. <strong>b </strong>Scatter plot of total UMI counts versus mitochondrial gene percentage before quality control. <strong>c </strong> Scatter plot of total UMI counts versus the number of detected genes before filtering. <strong>d </strong> Scatter plot of total UMI counts versus the number of detected genes after quality control.
   </figcaption>
@@ -142,7 +142,7 @@ To validate the correctness and robustness of the proposed downstream analysis w
 Low-dimensional representations learned through PCA (linear dimensionality reduction) and scVI (non-linear generative modeling) produced clear and biologically meaningful cellular clusters in the UMAP embeddings, shown in Figure<sup>[3](#fig-leiden)</sup>. The Leiden clustering results showed moderate similarity between the two approaches, with an estimated Adjusted Rand Index (ARI) of approximately 0.60. While PCA-based clustering yielded a larger number of clusters (15 vs. 11 for scVI) and finer subcluster separation, scVI-based clustering produced more compact clusters with sharper boundaries. These differences primarily arise from the distinct methodological properties of the two representation learning strategies—PCA captures maximal variance in a linear manner, whereas scVI models raw counts through a probabilistic framework that accounts for technical variability and non-linear relationships. Despite these variations in cluster number and boundary definition, the overall topological structure and major cell population distributions remained largely consistent, supporting the robustness of the workflow across different representation learning approaches.
 
 <figure id="fig-leiden">
-  <img src="https://raw.githubusercontent.com/MikeOgilvy/Blog/refs/heads/main/content/posts/Single%20Cell/leiden.png">
+  <img src="https://raw.githubusercontent.com/MikeOgilvy/mikeogilvy.github.io/refs/heads/main/content/posts/Single%20Cell/leiden.png">
   <figcaption>
     <strong>Figure 3.UMAP embeddings and Leiden clustering results from two representation learning strategies on the immune cell dataset. a</strong>  UMAP visualization colored by Leiden clusters obtained from PCA-based dimensionality reduction (15 clusters). <strong>b </strong>UMAP visualization colored by Leiden clusters obtained from scVI-based latent representation (11 clusters). 
   </figcaption>
@@ -155,7 +155,7 @@ The standard PCA-based workflow produced a complete set of immune cell type labe
 Despite differences in representation learning strategies and neighborhood graph construction, the two workflows exhibited a high degree of concordance in major immune cell type assignments. This agreement is visualized in Figure<sup>[4](#fig-annotation)</sup>d, where concordant and discordant annotations between workflows are highlighted. Discrepancies were restricted to a limited subset of cells and did not alter the overall biological interpretation. Together, these results demonstrate that both the standard and batch-aware workflows reliably recover consistent and biologically coherent cell type annotations in a benchmark immune cell dataset, supporting the correctness and flexibility of the proposed analysis framework.
 
 <figure id="fig-annotation">
-  <img src="https://raw.githubusercontent.com/MikeOgilvy/Blog/refs/heads/main/content/posts/Single%20Cell/annotation.png">
+  <img src="https://raw.githubusercontent.com/MikeOgilvy/mikeogilvy.github.io/refs/heads/main/content/posts/Single%20Cell/annotation.png">
   <figcaption>
     <strong>Figure 4. Workflow-level comparison of cell type annotation strategies on immune cell data. a</strong>   Cell type annotation obtained using a standard analysis workflow based on PCA-derived neighborhood graphs followed by automated CellTypist prediction. <strong>b </strong> Final cell type assignments produced by a semi-supervised scANVI model trained on the scVI latent representation. <strong>c </strong> Maximum posterior probability of scANVI predictions, highlighting annotation confidence and cells with ambiguous assignments. <strong>d </strong> Annotation agreement across workflows, indicating concordant and discordant cell type labels between the PCA-based CellTypist workflow and the scVI--scANVI workflow; low-confidence scANVI predictions were excluded from this comparison.
   </figcaption>
@@ -169,7 +169,7 @@ This annotation yielded seven major cell types with clear spatial separation in 
 These compositional shifts, evident in both proportional quantification and spatial distribution on UMAP embeddings, as shown in Figure<sup>[5](#fig-brain-annotation)</sup>, suggest that prion infection promotes neuronal differentiation or selective survival of neuronal lineages at the expense of progenitor and proliferative populations. The observed patterns provide a cellular context for interpreting infection-induced transcriptional responses in subsequent analyses.
 
 <figure id="fig-brain-annotation">
-  <img src="https://raw.githubusercontent.com/MikeOgilvy/Blog/refs/heads/main/content/posts/Single%20Cell/brain_annotation.png">
+  <img src="https://raw.githubusercontent.com/MikeOgilvy/mikeogilvy.github.io/refs/heads/main/content/posts/Single%20Cell/brain_annotation.png">
   <figcaption>
     <strong>Figure 5.Cell type annotation and compositional shifts in MV1, MV2, and NBH conditions. </strong> Left to right: UMAP embeddings colored by cell type for MV1, MV2, and NBH groups. Major populations include radial glia/neural progenitors, intermediate progenitors (IPC), excitatory and inhibitory neurons, astrocyte-like cells, OPCs, and proliferating cells. Quantitative proportions are summarized in Supplementary Table.
   </figcaption>
@@ -189,7 +189,7 @@ Collectively, these results indicate that MV1 infection predominantly induces tr
 
 
 <figure id="fig-infection">
-  <img src="https://raw.githubusercontent.com/MikeOgilvy/Blog/refs/heads/main/content/posts/Single%20Cell/infection_signature_dotplot.png">
+  <img src="https://raw.githubusercontent.com/MikeOgilvy/mikeogilvy.github.io/refs/heads/main/content/posts/Single%20Cell/infection_signature_dotplot.png">
   <figcaption>
     <strong>Figure 6. Infection-associated transcriptional signatures across major cell populations. </strong> Dot size indicates the fraction of expressing cells within each group, while color intensity represents mean normalized expression level. MV1 induces upregulation of cytoskeletal remodeling and neuronal activation genes (e.g. <i>MARCKSL1</i>, <i>STMN1</i>, <i>TUBB3</i>, <i>ACTG1</i>) primarily in excitatory and inhibitory neurons. In contrast, MV2 elicits a widespread upregulation of <i>TTR</i> across nearly all cell types, accompanied by moderate changes in stress-response and secretion-related genes.
   </figcaption>
