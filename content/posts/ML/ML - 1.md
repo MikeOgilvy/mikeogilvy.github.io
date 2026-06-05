@@ -6,8 +6,6 @@ math = true
 tags = ["Machine Learning"]
 +++
 
-# ML-1 Note: Supervised Learning; Linear Regression 
-
 ## 1. Basic Model of Linear Regression
 
 Linear Regression is one of the simplest and most fundamental models in **supervised learning**.  

@@ -13,8 +13,7 @@
       <link>http://localhost:1313/posts/ml/ml---2/</link>
       <pubDate>Sat, 28 Mar 2026 02:24:29 +0800</pubDate>
       <guid>http://localhost:1313/posts/ml/ml---2/</guid>
-      <description>&lt;h1 id=&#34;ml-2-note-linear-models-for-classification-and-glms&#34;&gt;ML-2 Note: Linear Models for Classification and GLMs&lt;/h1&gt;
-&lt;h2 id=&#34;1-why-classification-uses-logistic-regression&#34;&gt;1. Why Classification Uses Logistic Regression&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;1-why-classification-uses-logistic-regression&#34;&gt;1. Why Classification Uses Logistic Regression&lt;/h2&gt;
 &lt;p&gt;In classification problems, the target variable is discrete.&lt;/p&gt;
 &lt;p&gt;Binary classification example:&lt;/p&gt;
 &lt;p&gt;$$y \in \left\{ 0,1 \right\}$$&lt;/p&gt;
@@ -29,15 +28,17 @@
 &lt;p&gt;$$w^T x \in (-\infty, \infty)$$&lt;/p&gt;
 &lt;p&gt;while probabilities must satisfy&lt;/p&gt;
 &lt;p&gt;$$P(y=1|x) \in [0,1]$$&lt;/p&gt;
-&lt;p&gt;Thus we need a function that maps&lt;/p&gt;</description>
+&lt;p&gt;Thus we need a function that maps&lt;/p&gt;
+&lt;p&gt;$$(-\infty,\infty) \rightarrow (0,1)$$&lt;/p&gt;
+&lt;h3 id=&#34;logistic-function&#34;&gt;Logistic Function&lt;/h3&gt;
+&lt;p&gt;The logistic (sigmoid) function provides this mapping&lt;/p&gt;</description>
     </item>
     <item>
       <title>ML-1 Note: Supervised Learning; Linear Regression</title>
       <link>http://localhost:1313/posts/ml/ml---1/</link>
       <pubDate>Sun, 22 Mar 2026 03:32:29 +0800</pubDate>
       <guid>http://localhost:1313/posts/ml/ml---1/</guid>
-      <description>&lt;h1 id=&#34;ml-1-note-supervised-learning-linear-regression&#34;&gt;ML-1 Note: Supervised Learning; Linear Regression&lt;/h1&gt;
-&lt;h2 id=&#34;1-basic-model-of-linear-regression&#34;&gt;1. Basic Model of Linear Regression&lt;/h2&gt;
+      <description>&lt;h2 id=&#34;1-basic-model-of-linear-regression&#34;&gt;1. Basic Model of Linear Regression&lt;/h2&gt;
 &lt;p&gt;Linear Regression is one of the simplest and most fundamental models in &lt;strong&gt;supervised learning&lt;/strong&gt;.&lt;br&gt;
 The goal is to model the relationship between input features and a continuous target variable.&lt;/p&gt;
 &lt;h3 id=&#34;model-form&#34;&gt;Model Form&lt;/h3&gt;

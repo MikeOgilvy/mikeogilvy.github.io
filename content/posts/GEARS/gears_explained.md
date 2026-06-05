@@ -6,8 +6,6 @@ math = true
 tags = ["Virtual Cell","Single Cell"]
 +++
 
-# GEARS Explained: How Graph Neural Networks Predict the Unseen
-
 *A deep dive into the model that can forecast what happens when you knock out genes nobody has ever touched.*
 
 ---

@@ -13,8 +13,7 @@
       <link>http://localhost:1313/posts/gears/gears_explained/</link>
       <pubDate>Fri, 05 Jun 2026 07:19:29 +0800</pubDate>
       <guid>http://localhost:1313/posts/gears/gears_explained/</guid>
-      <description>&lt;h1 id=&#34;gears-explained-how-graph-neural-networks-predict-the-unseen&#34;&gt;GEARS Explained: How Graph Neural Networks Predict the Unseen&lt;/h1&gt;
-&lt;p&gt;&lt;em&gt;A deep dive into the model that can forecast what happens when you knock out genes nobody has ever touched.&lt;/em&gt;&lt;/p&gt;
+      <description>&lt;p&gt;&lt;em&gt;A deep dive into the model that can forecast what happens when you knock out genes nobody has ever touched.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;
 &lt;p&gt;You&amp;rsquo;re a biologist. You have a Perturb-seq dataset — 100,000 cells, each with one or two genes CRISPR-knocked out, plus single-cell RNA-seq readouts of the full transcriptome. You&amp;rsquo;ve experimentally perturbed 100 single genes and 130 two-gene combos. But there are 4,950 untested pairwise combinations. Running them all would cost a fortune.&lt;/p&gt;</description>

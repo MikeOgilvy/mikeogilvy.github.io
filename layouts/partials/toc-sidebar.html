@@ -1,6 +1,6 @@
 {{- if and (ne .Kind "home") (ne .Kind "section") -}}
 <aside id="toc-sidebar">
-    <div class="toc-sidebar-header">On this page</div>
+    <div class="toc-sidebar-header" style="padding: 16px 16px 16px 16px;">On This Page</div>
     <nav class="toc-sidebar-nav">
         {{- if .TableOfContents -}}
         {{ .TableOfContents }}

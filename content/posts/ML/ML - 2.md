@@ -6,8 +6,6 @@ math = true
 tags = ["Machine Learning"]
 +++
 
-# ML-2 Note: Linear Models for Classification and GLMs
-
 ## 1. Why Classification Uses Logistic Regression
 
 In classification problems, the target variable is discrete.
