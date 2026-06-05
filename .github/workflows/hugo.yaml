@@ -31,7 +31,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify --baseURL "https://mikeogilvy.github.io/blog/"
+        run: hugo --minify --baseURL "https://mikeogilvy.github.io/Blog/"
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
