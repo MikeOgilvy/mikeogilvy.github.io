@@ -319,4 +319,4 @@ Every one of these limitations has spawned follow-up work (TxPert, Dango, SCALE,
 
 - Roohani, Y., Huang, K. & Leskovec, J. Predicting transcriptional outcomes of novel multigene perturbations with GEARS. *Nature Biotechnology* **42**, 927–935 (2024).
 - GitHub: [snap-stanford/GEARS](https://github.com/snap-stanford/GEARS)
-- Norman, T.M. et al. Exploring genetic interaction manifolds. *Science* **365**, 786–793 (2019) — the Perturb-seq dataset GEARS was benchmarked on.
+
