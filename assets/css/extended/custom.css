@@ -430,3 +430,131 @@ body.photography-wide .post-content + .post-footer {
         display: none !important;
     }
 }
+
+/* ================================================================
+   窄屏顶栏放大
+   ================================================================
+   主题的窄屏规则全写在 core/zmedia.css 里，而那里一条顶栏规则都没有 ——
+   所以手机上顶栏一直是桌面尺寸：标题 24px、菜单 16px，比正文（18px）还小。
+
+   两个要点：
+   1) --header-height 就是 .nav 的 line-height，即"每一行的高度"，
+      调它两行一起变高（它还被 .main 的 min-height 用着，改在这里只影响窄屏）；
+   2) #menu 7 项在 500px 里原本"正好挤满一行"（实测 457px / 可用 472px），
+      字号一涨就会溢出。主题是 white-space:nowrap + overflow-x:auto，
+      溢出的结果是 Search 被推到屏幕外、只能横向滑 —— 这里改成换行：
+      两行全看得见，每个菜单项顺带拿到 40px 的可点高度。
+   ================================================================ */
+@media screen and (max-width: 768px) {
+    :root {
+        --header-height: 64px;
+    }
+
+    .logo a {
+        font-size: 30px;
+    }
+
+    #menu {
+        flex-wrap: wrap;
+        white-space: normal;
+        overflow-x: visible;
+        /* 间距用 column-gap：theme 的 li+li margin 会让换行后的第一项
+           莫名缩进一个 gap（它是"非首个 li"，跟在哪一行无关） */
+        column-gap: 16px;
+        /* 必须显式压掉从 .nav 继承来的 --header-height 行高，
+           否则换行后每个 flex line 都被撑到 64px，白多出一大截 */
+        line-height: 40px;
+    }
+
+    #menu li + li {
+        margin-inline-start: 0;
+    }
+
+    #menu a {
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    /* 注意写成 button#theme-toggle：主题里这条就是带元素名的（1,0,1），
+       只写 #theme-toggle（1,0,0）会被它压住，字号静默失效。 */
+    button#theme-toggle {
+        font-size: 30px;
+        padding-inline: 8px;
+    }
+}
+
+/* ================================================================
+   触屏修正：只有鼠标才成立的悬停动效，在触屏上要关掉
+   ================================================================
+   @media (hover: none) 命中的是"主输入方式不能悬停"的设备 —— 手机、平板。
+   带触屏的笔记本主输入仍是鼠标，不进这个分支，桌面观感一点没动。
+
+   为什么必须关：触屏没有 hover，但浏览器会把"点过的地方"粘在 :hover 上。
+   于是点一下卡片它就一直保持放大 1.02，点一下导航它就一直半透明，相册
+   封面标题要等"粘住"才出现。这不是"少了个动效"，是留下一个错误的静止状态。
+
+   同时把按压反馈从"缩小"换成"不改变几何"的：:active 若用 scale，按下
+   那一刻元素连同它内部的链接一起缩，边缘那条环带在那一瞬间点不到 ——
+   实测 .archive-entry 静止 324/324 命中、按下只剩 160/324。换背景/透明度
+   就没有这个问题（这本来也是主题自己的路数：它给 prefers-reduced-motion
+   就是把 :active 的 transform 全设成 none）。
+   ================================================================ */
+@media (hover: none) {
+    /* 1. 悬停才有的位移、放大、压暗：一律取消 */
+    .friend-card:hover > div,
+    .post-entry:hover,
+    .archive-entry:hover,
+    .post-tags a:hover,
+    .terms-tags a:hover,
+    .photo-item:hover img,
+    body.photography-wide .post-content p:has(img) img:hover {
+        transform: none;
+    }
+
+    .friend-card:hover > div,
+    .post-entry:hover,
+    .archive-entry:hover,
+    .terms-tags a:hover {
+        box-shadow: none;
+    }
+
+    /* 悬停时"当前这张提亮、同组其余压暗"：触屏没有指针位置，
+       手指点过还会把状态粘住，变成一组图里永远只有一张是亮的 */
+    body.photography-wide .post-content p:has(img):hover img:not(:hover) {
+        filter: none;
+    }
+
+    .archive-entry:hover {
+        background: none;
+    }
+
+    #menu a:hover {
+        opacity: 1;
+    }
+
+    /* 2. 按压反馈：不动几何，只动颜色 */
+    .friend-card:active > div,
+    .post-entry:active,
+    .archive-entry:active,
+    .post-tags a:active,
+    .terms-tags a:active,
+    #menu a:active {
+        transform: none;
+    }
+
+    .post-entry:active,
+    .archive-entry:active {
+        background: var(--tertiary);
+    }
+
+    .post-tags a:active,
+    .terms-tags a:active,
+    #menu a:active {
+        opacity: 0.55;
+    }
+
+    /* 3. 相册封面标题：桌面靠 hover 浮出来，触屏永远等不到 → 常显 */
+    .photo-item .photo-overlay {
+        opacity: 1;
+    }
+}

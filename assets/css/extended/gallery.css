@@ -201,3 +201,29 @@ body.gallery-locked {
         animation: none;
     }
 }
+
+/* ---------------------------------------------------------------
+   触屏修正（无 hover 的设备）
+   ---------------------------------------------------------------
+   同上：本文件的规则要压过自己，写在这里最稳 —— custom.css 和
+   gallery.css 是同一次 resources.Concat 拼起来的两个文件，
+   同特异性的规则后出现者胜，别隔着文件去覆盖。
+
+   "悬停时当前图提亮、同组其余压暗"依赖指针位置，触屏没有；
+   而手指点过之后 :hover 会粘住，结果是整组图永久停在
+   "一张亮、其余全暗"的状态。灯箱关闭按钮则相反：桌面靠悬停
+   把它从 0.65 提到 1，触屏一直是灰的 —— 直接给足不透明度。
+   --------------------------------------------------------------- */
+@media (hover: none) {
+    .gallery:hover .gallery-item img:not(:hover) {
+        filter: none;
+    }
+
+    .gallery .gallery-item img:hover {
+        transform: none;
+    }
+
+    .gallery-lightbox-close {
+        opacity: 1;
+    }
+}
