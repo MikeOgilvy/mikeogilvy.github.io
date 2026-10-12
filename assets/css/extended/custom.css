@@ -404,3 +404,29 @@ body.photography-wide .post-content + .post-footer {
         display: none;
     }
 }
+
+/* ================================================================
+   左侧浮动名片（#dynamic-profile）—— 窄屏必须"不存在"，不是"看不见"
+   ================================================================
+   这张名片是 position:fixed + z-index:999999。窄屏时 JS 只把它设成
+   opacity:0，元素本身还在、pointer-events 还是 auto，于是它作为一块
+   隐形面板钉在左上角盖住正文：点那块区域会命中它自己的社交链接
+   （Telegram / WhatsApp），正文卡片也只有露在外面的部分能点。
+
+   所以这里两手都要有：
+   1) pointer-events:none —— 兜底：只要 JS 还没把它显式打开，就绝不接受点击
+      （extend_footer.html 的 updatePosition 在宽屏显示时才设回 auto）；
+   2) 窄屏 display:none —— 结构上去掉，连盒子都不留。
+
+   注意：别把这条规则挪回 static/css/extended.css —— 那个文件没有被任何
+   模板引用（主题 head.html 打包的是 assets/css/extended/*.css），放那儿等于没写。
+   ================================================================ */
+#dynamic-profile {
+    pointer-events: none;
+}
+
+@media screen and (max-width: 1349px) {
+    #dynamic-profile {
+        display: none !important;
+    }
+}

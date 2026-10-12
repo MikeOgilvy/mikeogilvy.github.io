@@ -32,14 +32,18 @@
         function updatePosition() {
             const mainContent = document.querySelector(".main");
             if (!mainContent || window.innerWidth < 1350) {
+                // 窄屏：光设 opacity:0 只是"看不见"，元素仍然会在左上角
+                // 抢点击（命中它自己的社交链接）。必须同时掐掉 pointer-events。
                 profile.style.opacity = "0";
+                profile.style.pointerEvents = "none";
                 return;
             }
             const rect = mainContent.getBoundingClientRect();
-            profile.style.left = (rect.left - 240) + "px"; 
+            profile.style.left = (rect.left - 240) + "px";
             profile.style.top = "150px";
             profile.style.width = "200px";
             profile.style.opacity = "1";
+            profile.style.pointerEvents = "auto";
         }
 
         renderCalendar();
