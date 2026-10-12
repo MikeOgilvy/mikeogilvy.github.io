@@ -12,6 +12,14 @@
         cols="3"    最大列数，默认 3
         min="260"   每列最小宽度(px)，窗口变窄时自动减列，默认 260
         gap="16"    图片间距(px)，默认 16
+        note="…"    画廊下方的一行说明（左边界与画廊对齐、左侧带一条竖线）；
+                    不写就没有。`&` 照常写，Hugo 会自己转义。
+        notelink="…" 接着 note 末尾的一个可点品牌名（外链，自动带 ↗ 箭头）；
+        noteurl="…"  它的地址。两个都写才成为链接，只写 notelink 就是普通文字。
+                    例：note="Denoised & upscaled with" notelink="Topaz"
+                        noteurl="https://www.topazlabs.com/"
+                    刻意不用「把 HTML 塞进参数」的写法：那样参数里得手写 &amp;
+                    这类实体，而且模板要开 safeHTML 绕过转义。
 
     列数会自动收敛到"图片张数"和 cols 里的较小值：只放 2 张图时就是 2 列，
     不会出现"3 张图挤在 4 列里、最右一列空着"的怪样子；图片少时整体宽度
@@ -21,6 +29,12 @@
     留白 = (窗口宽 - 该上限) / 2，所以"两边留白想再多一点"，调的就是这三个
     数字（窄屏那一侧的兜底留白在 gallery.css 的 --gallery-pad）。
 
+    输出结构：外层 .gallery-block 挂着 --gallery-* 那组变量，并负责整体宽度和
+    居中；里面是 .gallery（多列瀑布流）和可选的 .gallery-note。说明特意放在
+    这一层，而不是在正文里另起一段 —— 一是这样它天然与画廊同宽同左边界，
+    二是正文段落会被 custom.css 给摄影页正文的那条 (0,2,3) 规则抓走
+    （90%/750px、color:#333，夜间主题下等于看不见）。
+
     说明：图片目前是外链（NAS/CDN），直接用原图 URL。如果以后把图片作为
     page bundle 的页面资源放进来，会自动生成 WebP 缩略图并写上宽高，
     浏览时不会再出现加载抖动。
@@ -29,6 +43,9 @@
 {{- $cols := int (.Get "cols" | default 3) -}}
 {{- $min := int (.Get "min" | default 260) -}}
 {{- $gap := int (.Get "gap" | default 16) -}}
+{{- $note := .Get "note" | default "" -}}
+{{- $notelink := .Get "notelink" | default "" -}}
+{{- $noteurl := .Get "noteurl" | default "" -}}
 {{- $page := .Page -}}
 
 {{- /* {{< >}} 形式的 .Inner 是未渲染的原文，所以直接抓 markdown 图片语法；
@@ -56,8 +73,9 @@
 {{- if eq $useCols 1 -}}{{- $max = 800 -}}
 {{- else if eq $useCols 2 -}}{{- $max = 980 -}}
 {{- end -}}
-<div class="gallery"
+<div class="gallery-block"
     style="--gallery-cols: {{ $useCols }}; --gallery-min: {{ $min }}px; --gallery-gap: {{ $gap }}px; --gallery-max: {{ $max }}px;">
+    <div class="gallery">
     {{- range $items -}}
         {{- $alt := .alt -}}
         {{- $src := .src -}}
@@ -82,6 +100,10 @@
             </a>
         </figure>
     {{- end -}}
+    </div>
+    {{- with $note }}
+    <p class="gallery-note">{{ . }}{{ with $notelink }}{{ if $noteurl }} <a href="{{ $noteurl }}" target="_blank" rel="noopener">{{ . }}</a>{{ else }} {{ . }}{{ end }}{{ end }}</p>
+    {{- end }}
 </div>
 
 <script>

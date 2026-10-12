@@ -11,7 +11,7 @@ tags: ["SF Fleet Week", "San Francisco", "Photography"]
 comments: false
 ---
 
-{{< gallery >}}
+{{< gallery note="Denoised & upscaled with" notelink="Topaz" noteurl="https://www.topazlabs.com/" >}}
 ![SF Fleet Week](https://mikeogilvy.uk/2026-10-11-Fleet-Week-SF/DSC_3851-wonder-3-5.png)
 ![SF Fleet Week](https://mikeogilvy.uk/2026-10-11-Fleet-Week-SF/DSC_3852-wonder-3-5.png)
 ![SF Fleet Week](https://mikeogilvy.uk/2026-10-11-Fleet-Week-SF/DSC_4036-bloom-2.png)

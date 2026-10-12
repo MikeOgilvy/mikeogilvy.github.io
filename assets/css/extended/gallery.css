@@ -7,16 +7,22 @@
    —— 后者会在每张图底部画出一条 1px 深色线（"不明窄边"的元凶）。
    ===================================================================== */
 
-.gallery {
+/* 外层容器：挂着 --gallery-* 那组变量，并负责整体宽度与居中。
+   说明文字也住在这层，所以它天然和画廊同宽、同左边界（见 .gallery-note）。 */
+.gallery-block {
     /* 两侧留白分两段起作用：
-       宽屏 —— 画廊宽度被 --gallery-max 卡住，所以留白 = (视口 - max) / 2，
+       宽屏 —— 整体宽度被 --gallery-max 卡住，所以留白 = (视口 - max) / 2，
                要更多留白就得调小 --gallery-max（由 shortcode 按列数给出）；
        窄屏 —— 由 --gallery-pad 兜底，保证两侧至少这么多。 */
     --gallery-pad: 64px;
-    columns: var(--gallery-cols, 3) var(--gallery-min, 260px);
-    column-gap: var(--gallery-gap, 16px);
     width: min(var(--gallery-max, 1320px), calc(100% - 2 * var(--gallery-pad)));
     margin: 60px auto;
+}
+
+.gallery {
+    columns: var(--gallery-cols, 3) var(--gallery-min, 260px);
+    column-gap: var(--gallery-gap, 16px);
+    width: 100%; /* 宽度交给 .gallery-block 定 */
 }
 
 .gallery .gallery-item {
@@ -54,6 +60,60 @@
 .gallery .gallery-item img:hover {
     transform: scale(1.02);
     box-shadow: 0 18px 50px rgba(0, 0, 0, 0.14);
+}
+
+/* 画廊下方的一行说明（shortcode 的 note="…"）。
+   它住在 .gallery-block 里，于是：宽度天然等于画廊宽度、左边界与画廊对齐；
+   也躲开了 custom.css 那条给摄影页正文的规则 —— 那条卡的是 .post-content 的
+   直接子元素，而这里已经隔了一层。用两级选择器压过主题的
+   `.post-content p { margin-bottom: var(--content-gap) }`（0,1,1）。 */
+.gallery-block .gallery-note {
+    margin: 26px 0 0 0;
+    padding-left: 14px;
+    border-left: 2px solid var(--secondary);
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--secondary);
+}
+
+/* 说明里指向工具官网的链接。
+   必须干掉主题的两条规则：`a { color: var(--primary) }`（不然链接比说明本身
+   亮一大截），以及 `.post-content a { box-shadow: 0 1px }` —— 就是它当年在
+   图片底部画出那条 1px 深色线（阴影色取 currentColor）。
+   静止时与说明同色，靠淡下划线和 ↗ 提示可点，悬停才提亮到 --primary。
+   颜色直接写 var(--secondary)，与上面那条声明保持一致；underline 用 color-mix
+   调到 35%，不支持 color-mix 的浏览器会丢掉这一行，fallback 是 currentColor。
+
+   注：本规则带 color 过渡，量「切主题之后」的计算样式时要先禁用过渡或等
+   200ms 以上，否则读到的是动画起始值 —— 别据此以为链接没跟着主题走。 */
+.gallery-block .gallery-note a {
+    color: var(--secondary);
+    box-shadow: none;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+    text-underline-offset: 3px;
+    transition: color 0.2s, text-decoration-color 0.2s;
+}
+
+/* 外链标记：↗ 由 CSS 补，这样参数里只写品牌名就行 */
+.gallery-block .gallery-note a::after {
+    content: "↗";
+    display: inline-block;
+    margin-left: 0.15em;
+    font-size: 0.85em;
+    opacity: 0.65;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.gallery-block .gallery-note a:hover {
+    color: var(--primary);
+    text-decoration-color: var(--primary);
+}
+
+.gallery-block .gallery-note a:hover::after {
+    opacity: 1;
+    transform: translate(1px, -1px);
 }
 
 /* ---------------------------------------------------------------
@@ -122,10 +182,12 @@ body.gallery-locked {
 
 /* 窄屏：收紧留白（手机上半屏别浪费） */
 @media screen and (max-width: 900px) {
-    .gallery {
+    .gallery-block {
         --gallery-pad: 20px;
-        column-gap: var(--gallery-gap, 12px);
         margin: 40px auto;
+    }
+    .gallery {
+        column-gap: var(--gallery-gap, 12px);
     }
     .gallery .gallery-item {
         margin-bottom: var(--gallery-gap, 12px);
