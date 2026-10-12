@@ -11,6 +11,7 @@ tags: ["Tokyo", "Travel", "Photography"]
 comments: false
 ---
 
+{{< gallery >}}
 ![Tokyo](https://img.nas421.cloud/photography/2026/08/DSC_0974.jpg)
 ![Tokyo](https://img.nas421.cloud/photography/2026/08/DSC_1005.jpg)
 ![Tokyo](https://img.nas421.cloud/photography/2026/08/DSC_1018.jpg)
@@ -19,3 +20,4 @@ comments: false
 ![Tokyo](https://img.nas421.cloud/photography/2026/08/DSC_1046.jpg)
 ![Tokyo](https://img.nas421.cloud/photography/2026/08/DSC_1068.jpg)
 ![Tokyo](https://img.nas421.cloud/photography/2026/08/DSC_1106.jpg)
+{{< /gallery >}}

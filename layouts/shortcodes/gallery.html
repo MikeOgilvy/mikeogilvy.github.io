@@ -1,0 +1,129 @@
+{{- /* ---------------------------------------------------------------------------
+    gallery —— 自适应瀑布流图片画廊（按图片原始宽高比排列，不裁剪）
+
+    用法（页面正文里，图片按行写入，alt 照常保留）：
+
+        {{< gallery >}}
+        ![海鸥](https://example.com/a.jpg)
+        ![海鸥](https://example.com/b.jpg)
+        {{< /gallery >}}
+
+    可选参数：
+        cols="3"    最大列数，默认 3
+        min="260"   每列最小宽度(px)，窗口变窄时自动减列，默认 260
+        gap="16"    图片间距(px)，默认 16
+
+    列数会自动收敛到"图片张数"和 cols 里的较小值：只放 2 张图时就是 2 列，
+    不会出现"3 张图挤在 4 列里、最右一列空着"的怪样子；图片少时整体宽度
+    也会相应收窄，避免单张图被拉到满屏。
+
+    画廊宽度上限按列数给：≥3 列 1320px、2 列 980px、1 列 800px。宽屏下两侧
+    留白 = (窗口宽 - 该上限) / 2，所以"两边留白想再多一点"，调的就是这三个
+    数字（窄屏那一侧的兜底留白在 gallery.css 的 --gallery-pad）。
+
+    说明：图片目前是外链（NAS/CDN），直接用原图 URL。如果以后把图片作为
+    page bundle 的页面资源放进来，会自动生成 WebP 缩略图并写上宽高，
+    浏览时不会再出现加载抖动。
+--------------------------------------------------------------------------- */ -}}
+
+{{- $cols := int (.Get "cols" | default 3) -}}
+{{- $min := int (.Get "min" | default 260) -}}
+{{- $gap := int (.Get "gap" | default 16) -}}
+{{- $page := .Page -}}
+
+{{- /* {{< >}} 形式的 .Inner 是未渲染的原文，所以直接抓 markdown 图片语法；
+       作者若写原生 <img> 标签，则退回抓标签。 */ -}}
+{{- $items := slice -}}
+{{- range findRESubmatch `!\[([^\]]*)\]\(\s*<?([^)\s>]+)>?(?:\s+["'][^"']*["'])?\s*\)` .Inner -}}
+    {{- $items = $items | append (dict "alt" (index . 1) "src" (index . 2)) -}}
+{{- end -}}
+{{- if not $items -}}
+    {{- range findRE `<img[^>]+>` .Inner -}}
+        {{- $tag := . -}}
+        {{- $src := "" -}}
+        {{- with findRESubmatch `src="([^"]*)"` $tag -}}{{- $src = index (index . 0) 1 -}}{{- end -}}
+        {{- $alt := "" -}}
+        {{- with findRESubmatch `alt="([^"]*)"` $tag -}}{{- $alt = index (index . 0) 1 -}}{{- end -}}
+        {{- with $src -}}{{- $items = $items | append (dict "alt" $alt "src" $src) -}}{{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- if $items -}}
+{{- /* 列数不超过图片张数；图片少时整体收窄，免得单张被拉满屏 */ -}}
+{{- $useCols := $cols -}}
+{{- if lt (len $items) $cols -}}{{- $useCols = len $items -}}{{- end -}}
+{{- $max := 1320 -}}
+{{- if eq $useCols 1 -}}{{- $max = 800 -}}
+{{- else if eq $useCols 2 -}}{{- $max = 980 -}}
+{{- end -}}
+<div class="gallery"
+    style="--gallery-cols: {{ $useCols }}; --gallery-min: {{ $min }}px; --gallery-gap: {{ $gap }}px; --gallery-max: {{ $max }}px;">
+    {{- range $items -}}
+        {{- $alt := .alt -}}
+        {{- $src := .src -}}
+        {{- $full := $src -}}
+        {{- $clean := index (split (index (split $src "?") 0) "#") 0 -}}
+        {{- $w := 0 -}}
+        {{- $h := 0 -}}
+        {{- /* 若同名文件同时是页面资源，改用优化后的缩略图 */ -}}
+        {{- with $page.Resources.GetMatch (path.Base $clean) -}}
+            {{- if and (eq .ResourceType "image") (ne .MediaType.SubType "svg") -}}
+                {{- $r := . -}}
+                {{- if gt .Width 1600 -}}{{- $r = .Resize "1600x webp q82" -}}{{- end -}}
+                {{- $src = $r.RelPermalink -}}
+                {{- $w = $r.Width -}}
+                {{- $h = $r.Height -}}
+            {{- end -}}
+        {{- end -}}
+        <figure class="gallery-item">
+            <a class="gallery-link" href="{{ $full }}">
+                <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" decoding="async"
+                    {{- if $w }} width="{{ $w }}" height="{{ $h }}"{{ end }}>
+            </a>
+        </figure>
+    {{- end -}}
+</div>
+
+<script>
+    (function () {
+        if (window.__galleryLightbox) return;
+        window.__galleryLightbox = true;
+
+        var box = document.createElement("div");
+        box.className = "gallery-lightbox";
+        box.setAttribute("role", "dialog");
+        box.setAttribute("aria-label", "Image viewer");
+        box.innerHTML = '<span class="gallery-lightbox-close" aria-label="Close">×</span><img alt="">';
+        document.body.appendChild(box);
+
+        var big = box.querySelector("img");
+
+        function close() {
+            box.classList.remove("open");
+            document.body.classList.remove("gallery-locked");
+            big.removeAttribute("src");
+        }
+
+        document.addEventListener("click", function (e) {
+            var link = e.target.closest && e.target.closest(".gallery-link");
+            if (link) {
+                e.preventDefault();
+                var thumb = link.querySelector("img");
+                big.src = link.getAttribute("href");
+                big.alt = thumb ? thumb.alt : "";
+                box.classList.add("open");
+                document.body.classList.add("gallery-locked");
+                return;
+            }
+            if (box.classList.contains("open")) close();
+        });
+
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" || e.keyCode === 27) close();
+        });
+    })();
+</script>
+{{- else -}}
+{{- warnf "gallery shortcode: no image found in %s" $page.RelPermalink -}}
+{{ .Inner }}
+{{- end -}}

@@ -1,0 +1,141 @@
+/* =====================================================================
+   图片画廊（gallery shortcode）
+   按图片原始宽高比自动排列 —— CSS columns 瀑布流，不裁剪、不拉伸。
+
+   选择器一律写成 .gallery xxx 两级，是为了压过主题里的
+   `.post-content figure` 和 `.post-content a { box-shadow: 0 1px 0 }`
+   —— 后者会在每张图底部画出一条 1px 深色线（"不明窄边"的元凶）。
+   ===================================================================== */
+
+.gallery {
+    /* 两侧留白分两段起作用：
+       宽屏 —— 画廊宽度被 --gallery-max 卡住，所以留白 = (视口 - max) / 2，
+               要更多留白就得调小 --gallery-max（由 shortcode 按列数给出）；
+       窄屏 —— 由 --gallery-pad 兜底，保证两侧至少这么多。 */
+    --gallery-pad: 64px;
+    columns: var(--gallery-cols, 3) var(--gallery-min, 260px);
+    column-gap: var(--gallery-gap, 16px);
+    width: min(var(--gallery-max, 1320px), calc(100% - 2 * var(--gallery-pad)));
+    margin: 60px auto;
+}
+
+.gallery .gallery-item {
+    /* 关键：别让一张图被拆到两列里 */
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    margin: 0 0 var(--gallery-gap, 16px) 0;
+    padding: 0;
+}
+
+.gallery .gallery-link {
+    display: block;
+    border-radius: 12px;
+    /* 干掉 PaperMod 给正文链接加的 1px 下划线阴影 */
+    box-shadow: none;
+}
+
+.gallery .gallery-item img {
+    display: block;
+    width: 100%;
+    height: auto; /* 保留原始比例 */
+    margin: 0;
+    border-radius: 12px;
+    background: var(--tertiary); /* 加载完成前的占位底色 */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+        box-shadow 0.4s, filter 0.3s;
+}
+
+/* 悬停：当前图放大提亮，同组其他图压暗（沿用站点原有交互语言） */
+.gallery:hover .gallery-item img:not(:hover) {
+    filter: brightness(0.82);
+}
+.gallery .gallery-item img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.14);
+}
+
+/* ---------------------------------------------------------------
+   点击放大（lightbox）
+   --------------------------------------------------------------- */
+.gallery-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 4vh 4vw;
+    background: rgba(0, 0, 0, 0.92);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    cursor: zoom-out;
+}
+
+.gallery-lightbox.open {
+    display: flex;
+}
+
+.gallery-lightbox img {
+    max-width: 100%;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    margin: 0;
+    border-radius: 8px;
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6);
+    animation: gallery-zoom 0.25s ease;
+}
+
+@keyframes gallery-zoom {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.gallery-lightbox-close {
+    position: absolute;
+    top: 14px;
+    right: 24px;
+    color: #fff;
+    font-size: 34px;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.65;
+    transition: opacity 0.2s;
+    user-select: none;
+}
+
+.gallery-lightbox-close:hover {
+    opacity: 1;
+}
+
+body.gallery-locked {
+    overflow: hidden;
+}
+
+/* 窄屏：收紧留白（手机上半屏别浪费） */
+@media screen and (max-width: 900px) {
+    .gallery {
+        --gallery-pad: 20px;
+        column-gap: var(--gallery-gap, 12px);
+        margin: 40px auto;
+    }
+    .gallery .gallery-item {
+        margin-bottom: var(--gallery-gap, 12px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .gallery .gallery-item img,
+    .gallery-lightbox img {
+        transition: none;
+        animation: none;
+    }
+}
