@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="auto" data-theme="auto">
 
-<head><meta charset="utf-8">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -10,16 +10,16 @@
 <meta name="description" content="GPU passthrough is usually presented as a short checklist: enable IOMMU, bind the GPU to vfio-pci, add a PCI host device, and boot the guest. That model breaks down on laptops, where firmware controls GPU enumeration and also supplies the ACPI tables that describe IOMMU isolation.
 On my ASUS ROG Zephyrus G14 GA403UV, the RTX 4060 was in a clean IOMMU group and was correctly bound to VFIO, yet QEMU still refused to start the VM. The useful part of the exercise was not the final XML. It was isolating the failure to an incorrect IVRS table and fixing only the affected PCI bus.">
 <meta name="author" content="Mike">
-<link rel="canonical" href="https://mikeogilvy.github.io/posts/virtualization/gpu-passthrough-kvm/">
+<link rel="canonical" href="http://localhost:1313/posts/virtualization/gpu-passthrough-kvm/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.096f620d37a6147e51eca7b871dbdfe68d282b7a7a535d89c154f8686b0f3483.css" integrity="sha256-CW9iDTemFH5R7Ke4cdvf5o0oK3p6U12JwVT4aGsPNIM=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://mikeogilvy.github.io/ico/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://mikeogilvy.github.io/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://mikeogilvy.github.io/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://mikeogilvy.github.io/apple-touch-icon.png">
-<link rel="mask-icon" href="https://mikeogilvy.github.io/safari-pinned-tab.svg">
+<link rel="icon" href="http://localhost:1313/ico/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://mikeogilvy.github.io/posts/virtualization/gpu-passthrough-kvm/">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/posts/virtualization/gpu-passthrough-kvm/">
 <noscript>
     <style>
         #theme-toggle,
@@ -144,7 +144,7 @@ On my ASUS ROG Zephyrus G14 GA403UV, the RTX 4060 was in a clean IOMMU group and
             <div id="cal-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; text-align: center; font-size: 0.65rem; color: var(--primary);"></div>
         </div>
     </div>
-</aside><meta property="og:url" content="https://mikeogilvy.github.io/posts/virtualization/gpu-passthrough-kvm/">
+</aside><meta property="og:url" content="http://localhost:1313/posts/virtualization/gpu-passthrough-kvm/">
   <meta property="og:site_name" content="Mike&#39;s Blog">
   <meta property="og:title" content="Making RTX 4060 Passthrough Work on an AMD Laptop">
   <meta property="og:description" content="GPU passthrough is usually presented as a short checklist: enable IOMMU, bind the GPU to vfio-pci, add a PCI host device, and boot the guest. That model breaks down on laptops, where firmware controls GPU enumeration and also supplies the ACPI tables that describe IOMMU isolation.
@@ -173,13 +173,13 @@ On my ASUS ROG Zephyrus G14 GA403UV, the RTX 4060 was in a clean IOMMU group and
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://mikeogilvy.github.io/posts/"
+      "item": "http://localhost:1313/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Making RTX 4060 Passthrough Work on an AMD Laptop",
-      "item": "https://mikeogilvy.github.io/posts/virtualization/gpu-passthrough-kvm/"
+      "item": "http://localhost:1313/posts/virtualization/gpu-passthrough-kvm/"
     }
   ]
 }
@@ -205,14 +205,14 @@ On my ASUS ROG Zephyrus G14 GA403UV, the RTX 4060 was in a clean IOMMU group and
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://mikeogilvy.github.io/posts/virtualization/gpu-passthrough-kvm/"
+    "@id": "http://localhost:1313/posts/virtualization/gpu-passthrough-kvm/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "Mike's Blog",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://mikeogilvy.github.io/ico/favicon.ico"
+      "url": "http://localhost:1313/ico/favicon.ico"
     }
   }
 }
@@ -221,7 +221,7 @@ On my ASUS ROG Zephyrus G14 GA403UV, the RTX 4060 was in a clean IOMMU group and
 <body id="top"><a href="#top" id="back-to-top" style="position:fixed;bottom:80px;right:calc((100vw - 960px) / 2 - 280px);z-index:9999;width:44px;height:44px;border-radius:50%;background:var(--tertiary);display:flex;align-items:center;justify-content:center;opacity:0.6;transition:opacity 0.3s,transform 0.2s;text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,0.15)" title="Back to top"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--primary)"><polyline points="18 15 12 9 6 15"></polyline></svg></a><header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://mikeogilvy.github.io/" accesskey="h" title="Mike&#39;s Blog (Alt + H)">Mike&#39;s Blog</a>
+            <a href="http://localhost:1313/" accesskey="h" title="Mike&#39;s Blog (Alt + H)">Mike&#39;s Blog</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -247,37 +247,37 @@ On my ASUS ROG Zephyrus G14 GA403UV, the RTX 4060 was in a clean IOMMU group and
         </div>
         <ul id="menu">
             <li>
-                <a href="https://mikeogilvy.github.io/" title="Home">
+                <a href="http://localhost:1313/" title="Home">
                     <span>Home</span>
                 </a>
             </li>
             <li>
-                <a href="https://mikeogilvy.github.io/posts/" title="Posts">
+                <a href="http://localhost:1313/posts/" title="Posts">
                     <span>Posts</span>
                 </a>
             </li>
             <li>
-                <a href="https://mikeogilvy.github.io/photography/" title="Photography">
+                <a href="http://localhost:1313/photography/" title="Photography">
                     <span>Photography</span>
                 </a>
             </li>
             <li>
-                <a href="https://mikeogilvy.github.io/archives/" title="Archive">
+                <a href="http://localhost:1313/archives/" title="Archive">
                     <span>Archive</span>
                 </a>
             </li>
             <li>
-                <a href="https://mikeogilvy.github.io/friends" title="Friends">
+                <a href="http://localhost:1313/friends" title="Friends">
                     <span>Friends</span>
                 </a>
             </li>
             <li>
-                <a href="https://mikeogilvy.github.io/tags/" title="Tags">
+                <a href="http://localhost:1313/tags/" title="Tags">
                     <span>Tags</span>
                 </a>
             </li>
             <li>
-                <a href="https://mikeogilvy.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                <a href="http://localhost:1313/search/" title="Search (Alt &#43; /)" accesskey=/>
                     <span>Search</span>
                 </a>
             </li>
@@ -288,7 +288,7 @@ On my ASUS ROG Zephyrus G14 GA403UV, the RTX 4060 was in a clean IOMMU group and
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://mikeogilvy.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://mikeogilvy.github.io/posts/">Posts</a></div>
+    <div class="breadcrumbs"><a href="http://localhost:1313/">Home</a>&nbsp;»&nbsp;<a href="http://localhost:1313/posts/">Posts</a></div>
     <h1 class="post-title entry-hint-parent">
       Making RTX 4060 Passthrough Work on an AMD Laptop
     </h1>
@@ -420,12 +420,12 @@ On my ASUS ROG Zephyrus G14 GA403UV, the RTX 4060 was in a clean IOMMU group and
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://mikeogilvy.github.io/tags/linux/">Linux</a></li>
-      <li><a href="https://mikeogilvy.github.io/tags/kvm/">KVM</a></li>
-      <li><a href="https://mikeogilvy.github.io/tags/vfio/">VFIO</a></li>
+      <li><a href="http://localhost:1313/tags/linux/">Linux</a></li>
+      <li><a href="http://localhost:1313/tags/kvm/">KVM</a></li>
+      <li><a href="http://localhost:1313/tags/vfio/">VFIO</a></li>
     </ul>
 <nav class="paginav">
-  <a class="next" href="https://mikeogilvy.github.io/posts/gears/gears_explained/">
+  <a class="next" href="http://localhost:1313/posts/gears/gears_explained/">
     <span class="title">Next »</span>
     <br>
     <span>GEARS Explained: How Graph Neural Networks Predict the Unseen</span>
@@ -499,7 +499,7 @@ On my ASUS ROG Zephyrus G14 GA403UV, the RTX 4060 was in a clean IOMMU group and
     })();
 </script>
 <footer class="footer">
-        <span>&copy; 2026 <a href="https://mikeogilvy.github.io/">Mike&#39;s Blog</a></span> · 
+        <span>&copy; 2026 <a href="http://localhost:1313/">Mike&#39;s Blog</a></span> · 
 
     <span>
         Powered by
