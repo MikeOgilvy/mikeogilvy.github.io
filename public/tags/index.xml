@@ -2,94 +2,108 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Mike&#39;s Blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://mikeogilvy.github.io/tags/</link>
     <description>Recent content in Tags on Mike&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 09 Sep 2026 20:00:00 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 11 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mikeogilvy.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Photography</title>
+      <link>https://mikeogilvy.github.io/tags/photography/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://mikeogilvy.github.io/tags/photography/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>San Francisco</title>
+      <link>https://mikeogilvy.github.io/tags/san-francisco/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://mikeogilvy.github.io/tags/san-francisco/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SF Fleet Week</title>
+      <link>https://mikeogilvy.github.io/tags/sf-fleet-week/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://mikeogilvy.github.io/tags/sf-fleet-week/</guid>
+      <description></description>
+    </item>
     <item>
       <title>KVM</title>
-      <link>http://localhost:1313/tags/kvm/</link>
+      <link>https://mikeogilvy.github.io/tags/kvm/</link>
       <pubDate>Wed, 09 Sep 2026 20:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/tags/kvm/</guid>
+      <guid>https://mikeogilvy.github.io/tags/kvm/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux</title>
-      <link>http://localhost:1313/tags/linux/</link>
+      <link>https://mikeogilvy.github.io/tags/linux/</link>
       <pubDate>Wed, 09 Sep 2026 20:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/tags/linux/</guid>
+      <guid>https://mikeogilvy.github.io/tags/linux/</guid>
       <description></description>
     </item>
     <item>
       <title>VFIO</title>
-      <link>http://localhost:1313/tags/vfio/</link>
+      <link>https://mikeogilvy.github.io/tags/vfio/</link>
       <pubDate>Wed, 09 Sep 2026 20:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/tags/vfio/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Photography</title>
-      <link>http://localhost:1313/tags/photography/</link>
-      <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/photography/</guid>
+      <guid>https://mikeogilvy.github.io/tags/vfio/</guid>
       <description></description>
     </item>
     <item>
       <title>SFO Airport</title>
-      <link>http://localhost:1313/tags/sfo-airport/</link>
+      <link>https://mikeogilvy.github.io/tags/sfo-airport/</link>
       <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/sfo-airport/</guid>
+      <guid>https://mikeogilvy.github.io/tags/sfo-airport/</guid>
       <description></description>
     </item>
     <item>
       <title>Travel</title>
-      <link>http://localhost:1313/tags/travel/</link>
+      <link>https://mikeogilvy.github.io/tags/travel/</link>
       <pubDate>Wed, 09 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/travel/</guid>
+      <guid>https://mikeogilvy.github.io/tags/travel/</guid>
       <description></description>
     </item>
     <item>
       <title>Tokyo</title>
-      <link>http://localhost:1313/tags/tokyo/</link>
+      <link>https://mikeogilvy.github.io/tags/tokyo/</link>
       <pubDate>Sat, 15 Aug 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tokyo/</guid>
+      <guid>https://mikeogilvy.github.io/tags/tokyo/</guid>
       <description></description>
     </item>
     <item>
       <title>Single Cell</title>
-      <link>http://localhost:1313/tags/single-cell/</link>
+      <link>https://mikeogilvy.github.io/tags/single-cell/</link>
       <pubDate>Fri, 05 Jun 2026 07:19:29 +0800</pubDate>
-      <guid>http://localhost:1313/tags/single-cell/</guid>
+      <guid>https://mikeogilvy.github.io/tags/single-cell/</guid>
       <description></description>
     </item>
     <item>
       <title>Virtual Cell</title>
-      <link>http://localhost:1313/tags/virtual-cell/</link>
+      <link>https://mikeogilvy.github.io/tags/virtual-cell/</link>
       <pubDate>Fri, 05 Jun 2026 07:19:29 +0800</pubDate>
-      <guid>http://localhost:1313/tags/virtual-cell/</guid>
+      <guid>https://mikeogilvy.github.io/tags/virtual-cell/</guid>
       <description></description>
     </item>
     <item>
       <title>Nature</title>
-      <link>http://localhost:1313/tags/nature/</link>
+      <link>https://mikeogilvy.github.io/tags/nature/</link>
       <pubDate>Mon, 06 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/nature/</guid>
+      <guid>https://mikeogilvy.github.io/tags/nature/</guid>
       <description></description>
     </item>
     <item>
       <title>Qingshan Lake</title>
-      <link>http://localhost:1313/tags/qingshan-lake/</link>
+      <link>https://mikeogilvy.github.io/tags/qingshan-lake/</link>
       <pubDate>Mon, 06 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/qingshan-lake/</guid>
+      <guid>https://mikeogilvy.github.io/tags/qingshan-lake/</guid>
       <description></description>
     </item>
     <item>
       <title>Machine Learning</title>
-      <link>http://localhost:1313/tags/machine-learning/</link>
+      <link>https://mikeogilvy.github.io/tags/machine-learning/</link>
       <pubDate>Sat, 28 Mar 2026 02:24:29 +0800</pubDate>
-      <guid>http://localhost:1313/tags/machine-learning/</guid>
+      <guid>https://mikeogilvy.github.io/tags/machine-learning/</guid>
       <description></description>
     </item>
   </channel>

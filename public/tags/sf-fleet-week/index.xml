@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SF Fleet Week on Mike&#39;s Blog</title>
+    <link>https://mikeogilvy.github.io/tags/sf-fleet-week/</link>
+    <description>Recent content in SF Fleet Week on Mike&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sun, 11 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://mikeogilvy.github.io/tags/sf-fleet-week/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SF Fleet Week</title>
+      <link>https://mikeogilvy.github.io/photography/sf-fleet-week/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://mikeogilvy.github.io/photography/sf-fleet-week/</guid>
+      <description>A collection of photographs from San Francisco Fleet Week.</description>
+    </item>
+  </channel>
+</rss>

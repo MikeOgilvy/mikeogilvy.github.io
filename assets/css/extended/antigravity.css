@@ -1,0 +1,48 @@
+/* ==========================================================================
+   Google Antigravity Cursor Tracking Animation Styles
+   Faithfully ported from https://antigravity.google WebGL GPGPU Engine
+   ========================================================================== */
+
+.main-particles-component-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.main-particles-component-section .main-particles-container,
+.main-particles-component-section .main-particles-container canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: block;
+}
+
+/* Ensure all page content, navbar, profile card, and footer sit cleanly above the particle canvas */
+.main,
+.header,
+.footer,
+.profile,
+.nav {
+    position: relative;
+    z-index: 1;
+}
+
+/* Smooth background transition when toggling dark/light mode */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Optimize on mobile / touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .main-particles-component-section {
+        opacity: 0.95;
+    }
+}
