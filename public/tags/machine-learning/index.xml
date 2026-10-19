@@ -1,19 +1,63 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Machine Learning on Mike&#39;s Blog</title>
-    <link>http://localhost:1313/tags/machine-learning/</link>
-    <description>Recent content in Machine Learning on Mike&#39;s Blog</description>
-    <generator>Hugo</generator>
-    <language>zh-cn</language>
-    <lastBuildDate>Sat, 28 Mar 2026 02:24:29 +0800</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>ML-2 Note: Linear Models for Classification and GLMs</title>
-      <link>http://localhost:1313/posts/ml/ml---2/</link>
-      <pubDate>Sat, 28 Mar 2026 02:24:29 +0800</pubDate>
-      <guid>http://localhost:1313/posts/ml/ml---2/</guid>
-      <description>&lt;h2 id=&#34;1-why-classification-uses-logistic-regression&#34;&gt;1. Why Classification Uses Logistic Regression&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Machine Learning on Mike's Blog</title><link>https://mikeogilvy.github.io/tags/machine-learning/</link><description>Recent content in Machine Learning on Mike's Blog</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 18 Oct 2026 02:24:29 +0800</lastBuildDate><atom:link href="https://mikeogilvy.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml"/><item><title>Mike Ogilvy 美国行</title><link>https://mikeogilvy.github.io/posts/lifeinusa/part1/</link><pubDate>Sun, 18 Oct 2026 02:24:29 +0800</pubDate><guid>https://mikeogilvy.github.io/posts/lifeinusa/part1/</guid><description>&lt;h1 id="mike-ogilvy-美国行"&gt;Mike Ogilvy 美国行&lt;/h1&gt;
+&lt;h2 id="pvg--sfo"&gt;PVG 🛫 SFO&lt;/h2&gt;
+&lt;h2 id="berkeley-and-uc-berkeley"&gt;Berkeley and UC berkeley&lt;/h2&gt;
+&lt;h3 id="传-送-点"&gt;传 送 点&lt;/h3&gt;
+&lt;p&gt;乘坐BART到达&lt;code&gt;Downtown Berkeley&lt;/code&gt;，这就是我在美国的传送点。美国的BART和杭州地铁又有些不同，总的来说有三点不同：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;1. &lt;/code&gt;手机信号极差
+&lt;code&gt;2. &lt;/code&gt;站间距离长
+&lt;code&gt;3. &lt;/code&gt;班次没那么密集&lt;/p&gt;
+&lt;p&gt;总体来说，更像&lt;code&gt;轻轨&lt;/code&gt;而不是&lt;code&gt;地铁&lt;/code&gt;，感觉想要真正体验美国的地铁，还得飞到&lt;code&gt;新乡&lt;/code&gt;去。&lt;/p&gt;
+&lt;div class="image-grid image-grid--2-cols"&gt;
+&lt;figure&gt;
+&lt;img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/photo_2026-10-18_23-16-22.jpg" alt="Downtown Berkeley 车站外景"&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/photo_2026-10-18_23-16-29.jpg" alt="BART 车站站台"&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="town--city"&gt;Town / City&lt;/h3&gt;
+&lt;p&gt;如果对应到中国的行政区划，伯克利和西湖区平级，属&lt;code&gt;阿拉米達縣&lt;/code&gt;，如果对应城市规模，那大概和三墩镇差不多。这是一个很安静的小镇，几乎没有高楼，不过给人一种“一应俱全&amp;quot;的感觉，具体来说就是有公交车有超市有奶茶店（特指Heytea，因为Heytea可以买一送一，适合偶尔想消费的时候喝），可以满足我的生活需求。&lt;/p&gt;
+&lt;h3 id="uc-berkeley"&gt;UC Berkeley&lt;/h3&gt;
+&lt;p&gt;走进伯克利-大学，仿佛走进一个真正的“大学”。这么说的原因当然是因为对于本科生来说，某个&lt;code&gt;东方Caltech&lt;/code&gt;毫无大学的感觉，而是更像一个研究所。（并没有诋毁母校的意思）校园里植被遍布，生机盎然，其中分布最广的是松树🌲，在伯克利，只要有一块没有被硬化的地面，那么你一定可以看到松鼠从一棵松树跳到另一棵。&lt;/p&gt;
+&lt;div class="image-grid image-grid--2-cols"&gt;
+&lt;figure&gt;
+&lt;img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/photo_2026-10-18_23-19-09.jpg" alt="Berkeley 钟楼"&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/photo_2026-10-18_23-20-19.jpg" alt="一只手足无措的小松鼠"&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;伯克利整个校园是依山而建的，在有坡度的土地上的建筑总有一个明显的特征，那就是——没有一个准确的1楼。以李嘉诚先生捐赠修建的Li-Cai-Shing Center为例，你可以从其中一个门进入，走楼梯往上一楼，再从另一个门出来，颇有一种“盗梦空间”的感觉。&lt;/p&gt;
+&lt;h2 id="san-francisco"&gt;San Francisco&lt;/h2&gt;
+&lt;h3 id="the-golden-gate-bridge-金-门-大-桥"&gt;The Golden Gate Bridge 金 门 大 桥&lt;/h3&gt;
+&lt;p&gt;人民教育出版社的编委们把这座多灾多难的桥作为封面，Apple公司把她的剪影做成emoji🌉，可以见得这座桥在旧金山甚至美国的重要性。更重要的是，党和国家领导人习近平主席曾经到访旧金山，并曾在桥前留下影像记录。正因为这样的重要性，我选择在落地的第一个周末就前往金门大桥。&lt;/p&gt;
+&lt;div class="image-grid image-grid--2-cols image-grid--wide"&gt;
+&lt;figure&gt;
+&lt;img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/DSC_1187_1.jpg" alt="仿主席照片"&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/DSC_1279.jpg" alt="金门大桥桥身特写"&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;p&gt;可能是因为雾蒙蒙的天气，实地看来桥的红色并没有那么鲜艳，不过这并不能阻挡我用蹩脚的后期技术把她修的艳丽一些。海面很蓝，蓝的有些深邃，海面上看起来很“拥堵”，游艇，摩托艇，帆船“川流不息”。桥的旁边是大片的草地和沙滩，孩子和狗在浅滩上疯跑，着实让我羡慕。&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;在桥的一侧眺望，可以看到恶魔岛&lt;/em&gt;&lt;/p&gt;
+&lt;div class="image-grid image-grid--left-wide"&gt;
+&lt;figure&gt;
+&lt;img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/DSC_1376.JPG" alt="远眺恶魔岛"&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/DSC_1420.jpg" alt="海面上穿梭的船只"&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/DSC_1443.jpg" alt="海湾与远山"&gt;
+&lt;/figure&gt;
+&lt;/div&gt;
+&lt;h3 id="san-francisco-downtown-市-区"&gt;San Francisco Downtown 市 区&lt;/h3&gt;
+&lt;p&gt;旧金山市区和伯克利有很大区别，有一种真正的“大城市”的感觉。China Town和银行街连在一起，有一种建筑突然升高的空间压缩感觉。建筑非常密集，即使是在盛夏，街道上依然见不到很多阳光，反而有一股淡淡的凉意&lt;/p&gt;
+&lt;h2 id="san-jose"&gt;San Jose&lt;/h2&gt;
+&lt;h2 id="people"&gt;People&lt;/h2&gt;
+&lt;h2 id="life"&gt;Life&lt;/h2&gt;
+&lt;h2 id="study"&gt;Study&lt;/h2&gt;</description></item><item><title>ML-2 Note: Linear Models for Classification and GLMs</title><link>https://mikeogilvy.github.io/posts/ml/ml---2/</link><pubDate>Sat, 28 Mar 2026 02:24:29 +0800</pubDate><guid>https://mikeogilvy.github.io/posts/ml/ml---2/</guid><description>&lt;h2 id="1-why-classification-uses-logistic-regression"&gt;1. Why Classification Uses Logistic Regression&lt;/h2&gt;
 &lt;p&gt;In classification problems, the target variable is discrete.&lt;/p&gt;
 &lt;p&gt;Binary classification example:&lt;/p&gt;
 &lt;p&gt;$$y \in \left\{ 0,1 \right\}$$&lt;/p&gt;
@@ -21,7 +65,7 @@
 &lt;p&gt;$$x \in \mathbb{R}^d$$&lt;/p&gt;
 &lt;p&gt;we want to model&lt;/p&gt;
 &lt;p&gt;$$P(y=1|x)$$&lt;/p&gt;
-&lt;h3 id=&#34;problem-with-linear-regression&#34;&gt;Problem with Linear Regression&lt;/h3&gt;
+&lt;h3 id="problem-with-linear-regression"&gt;Problem with Linear Regression&lt;/h3&gt;
 &lt;p&gt;A linear model predicts&lt;/p&gt;
 &lt;p&gt;$$f(x) = w^T x$$&lt;/p&gt;
 &lt;p&gt;but&lt;/p&gt;
@@ -30,18 +74,11 @@
 &lt;p&gt;$$P(y=1|x) \in [0,1]$$&lt;/p&gt;
 &lt;p&gt;Thus we need a function that maps&lt;/p&gt;
 &lt;p&gt;$$(-\infty,\infty) \rightarrow (0,1)$$&lt;/p&gt;
-&lt;h3 id=&#34;logistic-function&#34;&gt;Logistic Function&lt;/h3&gt;
-&lt;p&gt;The logistic (sigmoid) function provides this mapping&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>ML-1 Note: Supervised Learning; Linear Regression</title>
-      <link>http://localhost:1313/posts/ml/ml---1/</link>
-      <pubDate>Sun, 22 Mar 2026 03:32:29 +0800</pubDate>
-      <guid>http://localhost:1313/posts/ml/ml---1/</guid>
-      <description>&lt;h2 id=&#34;1-basic-model-of-linear-regression&#34;&gt;1. Basic Model of Linear Regression&lt;/h2&gt;
+&lt;h3 id="logistic-function"&gt;Logistic Function&lt;/h3&gt;
+&lt;p&gt;The logistic (sigmoid) function provides this mapping&lt;/p&gt;</description></item><item><title>ML-1 Note: Supervised Learning; Linear Regression</title><link>https://mikeogilvy.github.io/posts/ml/ml---1/</link><pubDate>Sun, 22 Mar 2026 03:32:29 +0800</pubDate><guid>https://mikeogilvy.github.io/posts/ml/ml---1/</guid><description>&lt;h2 id="1-basic-model-of-linear-regression"&gt;1. Basic Model of Linear Regression&lt;/h2&gt;
 &lt;p&gt;Linear Regression is one of the simplest and most fundamental models in &lt;strong&gt;supervised learning&lt;/strong&gt;.&lt;br&gt;
 The goal is to model the relationship between input features and a continuous target variable.&lt;/p&gt;
-&lt;h3 id=&#34;model-form&#34;&gt;Model Form&lt;/h3&gt;
+&lt;h3 id="model-form"&gt;Model Form&lt;/h3&gt;
 &lt;p&gt;For a dataset with feature vector \(x\):&lt;/p&gt;
 &lt;p&gt;\[
 y = w^T x + b
@@ -59,8 +96,5 @@ y = w^T x + b
 &lt;li&gt;\(\hat{y}\): predicted value&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h3 id=&#34;loss-function&#34;&gt;Loss Function&lt;/h3&gt;
-&lt;p&gt;The most common loss function for linear regression is &lt;strong&gt;Mean Squared Error (MSE)&lt;/strong&gt;.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;h3 id="loss-function"&gt;Loss Function&lt;/h3&gt;
+&lt;p&gt;The most common loss function for linear regression is &lt;strong&gt;Mean Squared Error (MSE)&lt;/strong&gt;.&lt;/p&gt;</description></item></channel></rss>

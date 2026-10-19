@@ -10,7 +10,7 @@
 <meta name="description" content="Recording life, technology and essays">
 <meta name="author" content="Mike">
 <link rel="canonical" href="http://localhost:1313/tags/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.096f620d37a6147e51eca7b871dbdfe68d282b7a7a535d89c154f8686b0f3483.css" integrity="sha256-CW9iDTemFH5R7Ke4cdvf5o0oK3p6U12JwVT4aGsPNIM=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.db63fa657dc361a0c7243ede1eaef3f7a9fcbb9d705a7ddd663cd5b13d6ffb24.css" integrity="sha256-22P6ZX3DYaDHJD7eHq7z96n8u51wWn3dZjzVsT1v&#43;yQ=" rel="preload stylesheet" as="style">
 <link rel="icon" href="http://localhost:1313/ico/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -262,7 +262,10 @@
         <a href="http://localhost:1313/tags/tokyo/">Tokyo <sup><strong><sup>1</sup></strong></sup> </a>
     </li>
     <li>
-        <a href="http://localhost:1313/tags/travel/">Travel <sup><strong><sup>2</sup></strong></sup> </a>
+        <a href="http://localhost:1313/tags/travel/">Travel <sup><strong><sup>3</sup></strong></sup> </a>
+    </li>
+    <li>
+        <a href="http://localhost:1313/tags/us/">US <sup><strong><sup>1</sup></strong></sup> </a>
     </li>
     <li>
         <a href="http://localhost:1313/tags/vfio/">VFIO <sup><strong><sup>1</sup></strong></sup> </a>
@@ -437,6 +440,98 @@
             setTimeout(fixLayout, 100);
             setTimeout(fixLayout, 1000); 
         }
+    })();
+</script>
+
+<script>
+    (function () {
+        if (window.__imageLightboxInit) return;
+        window.__imageLightboxInit = true;
+
+        const lightbox = document.createElement('div');
+        lightbox.className = 'image-lightbox';
+        lightbox.hidden = true;
+        lightbox.setAttribute('role', 'dialog');
+        lightbox.setAttribute('aria-modal', 'true');
+        lightbox.setAttribute('aria-label', '放大图片');
+        lightbox.innerHTML = `
+            <span class="image-lightbox__close" aria-label="关闭">&times;</span>
+            <div class="image-lightbox__wrapper">
+                <img class="image-lightbox__image" alt="">
+                <div class="image-lightbox__caption"></div>
+            </div>
+        `;
+        document.body.appendChild(lightbox);
+
+        const enlargedImage = lightbox.querySelector('.image-lightbox__image');
+        const captionEl = lightbox.querySelector('.image-lightbox__caption');
+        let lastFocusedElement = null;
+        let closeTimer;
+
+        const close = () => {
+            if (lightbox.hidden) return;
+            lightbox.classList.remove('is-open');
+            document.body.classList.remove('image-lightbox-open');
+            window.clearTimeout(closeTimer);
+            closeTimer = window.setTimeout(() => {
+                lightbox.hidden = true;
+                enlargedImage.removeAttribute('src');
+                captionEl.textContent = '';
+            }, 180);
+            lastFocusedElement?.focus?.();
+        };
+
+        const open = (image) => {
+            window.clearTimeout(closeTimer);
+            lastFocusedElement = document.activeElement;
+
+            const parentLink = image.closest('a');
+            let fullSrc = image.currentSrc || image.src;
+            if (parentLink && /\.(jpg|jpeg|png|webp|avif|gif)(\?.*)?$/i.test(parentLink.getAttribute('href') || '')) {
+                fullSrc = parentLink.getAttribute('href');
+            }
+
+            let captionText = '';
+            const fig = image.closest('figure');
+            if (fig) {
+                const figcap = fig.querySelector('figcaption');
+                if (figcap) captionText = figcap.textContent.trim();
+            }
+            if (!captionText) {
+                captionText = image.getAttribute('title') || image.getAttribute('alt') || '';
+            }
+
+            enlargedImage.src = fullSrc;
+            enlargedImage.alt = image.alt || '';
+            if (captionText) {
+                captionEl.textContent = captionText;
+                captionEl.style.display = 'block';
+            } else {
+                captionEl.textContent = '';
+                captionEl.style.display = 'none';
+            }
+
+            lightbox.hidden = false;
+            document.body.classList.add('image-lightbox-open');
+            requestAnimationFrame(() => lightbox.classList.add('is-open'));
+        };
+
+        document.addEventListener('click', (event) => {
+            const image = event.target.closest?.('.post-content img, .prose img');
+            if (image) {
+                if (image.closest('.gallery-link') || image.closest('.image-lightbox')) return;
+                event.preventDefault();
+                open(image);
+                return;
+            }
+            if (event.target === lightbox || event.target === enlargedImage || event.target.closest?.('.image-lightbox__close')) {
+                close();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' || event.keyCode === 27) close();
+        });
     })();
 </script>
 

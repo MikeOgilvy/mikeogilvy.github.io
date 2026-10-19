@@ -1,0 +1,91 @@
+{{- /* ---------------------------------------------------------------------------
+    image-grid —— 仿照 NeoJuliet 风格的自适应图片画廊与拼贴网格
+    
+    用法（页面正文里）：
+    1. 三图左大右二（经典杂志画报布局）：
+       {{< image-grid layout="left-wide" >}}
+       ![图1](url1)
+       ![图2](url2)
+       ![图3](url3)
+       {{< /image-grid >}}
+
+    2. 两图并排：
+       {{< image-grid cols="2" >}}
+       ![图1](url1)
+       ![图2](url2)
+       {{< /image-grid >}}
+
+    3. 带标题/说明：
+       {{< image-grid layout="left-wide" caption="金门大桥与旧金山海湾" >}}
+       ![恶魔岛](url1 "远眺恶魔岛")
+       ![游艇](url2)
+       ![大桥](url3)
+       {{< /image-grid >}}
+
+    可选参数：
+        layout="left-wide" | "right-wide" | "cols-2" | "cols-3" | "cols-4"
+        cols="2" | "3" | "4"
+        aspect="16/9" | "2/1" | "3/2" 等
+        caption="整组图说明"
+        captions="true"  (若为 true，会把 markdown alt 文字自动作为每个图的说明)
+--------------------------------------------------------------------------- */ -}}
+
+{{- $layout := .Get "layout" | default "" -}}
+{{- $cols := .Get "cols" | default "" -}}
+{{- $aspect := .Get "aspect" | default "" -}}
+{{- $caption := .Get "caption" | default "" -}}
+{{- $showCaptions := or (eq (.Get "captions") "true") (eq (.Get "captions") true) -}}
+
+{{- /* 提取所有图片项 */ -}}
+{{- $items := slice -}}
+{{- range findRESubmatch `!\[([^\]]*)\]\(\s*<?([^)\s>]+)>?(?:\s+["']([^"']*)["'])?\s*\)` .Inner -}}
+    {{- $alt := index . 1 -}}
+    {{- $src := index . 2 -}}
+    {{- $title := index . 3 -}}
+    {{- $items = $items | append (dict "alt" $alt "src" $src "title" $title) -}}
+{{- end -}}
+
+{{- /* 确定布局样式 */ -}}
+{{- $class := "image-grid" -}}
+{{- if eq $layout "left-wide" -}}
+    {{- $class = "image-grid image-grid--left-wide" -}}
+{{- else if eq $layout "right-wide" -}}
+    {{- $class = "image-grid image-grid--right-wide" -}}
+{{- else if or (eq $layout "cols-2") (eq $cols "2") -}}
+    {{- $class = "image-grid image-grid--2-cols" -}}
+{{- else if or (eq $layout "cols-3") (eq $cols "3") -}}
+    {{- $class = "image-grid image-grid--3-cols" -}}
+{{- else if or (eq $layout "cols-4") (eq $cols "4") -}}
+    {{- $class = "image-grid image-grid--4-cols" -}}
+{{- else if eq (len $items) 3 -}}
+    {{- $class = "image-grid image-grid--left-wide" -}}
+{{- else if eq (len $items) 2 -}}
+    {{- $class = "image-grid image-grid--2-cols" -}}
+{{- end -}}
+
+{{- if $items -}}
+<div class="{{ $class }}"{{ with $aspect }} style="aspect-ratio: {{ . | safeCSS }};"{{ end }}>
+    {{- range $items -}}
+    <figure>
+        <img src="{{ .src }}" alt="{{ .alt }}" loading="lazy" decoding="async">
+        {{- with .title -}}
+        <figcaption>{{ . }}</figcaption>
+        {{- else -}}
+        {{- if and $showCaptions .alt -}}
+        <figcaption>{{ .alt }}</figcaption>
+        {{- end -}}
+        {{- end -}}
+    </figure>
+    {{- end -}}
+</div>
+{{- with $caption }}
+<div class="image-grid-caption">{{ . }}</div>
+{{- end }}
+{{- else -}}
+<div class="{{ $class }}"{{ with $aspect }} style="aspect-ratio: {{ . | safeCSS }};"{{ end }}>
+    {{ .Inner }}
+</div>
+{{- with $caption }}
+<div class="image-grid-caption">{{ . }}</div>
+{{- end }}
+{{- end -}}
