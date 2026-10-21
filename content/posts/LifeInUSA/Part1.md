@@ -146,7 +146,9 @@ Google Store里面有不少Google的周边，马克杯和帆布袋都不错。Go
 
 ### Stanford University
 
-和伯克利的哥特式建筑不尽相同，斯坦福的建筑风格更偏向罗曼式`（Romanesque）`。步入校门，一股古典气息就扑面而来
+和伯克利的哥特式建筑不尽相同，斯坦福的建筑风格更偏向罗曼式`（Romanesque）`。步入校门，一股古典气息就扑面而来。我们去的时候好像有集会，每人一瓶小麦汁高谈阔论，我也没咋听懂他们在聊什么。
+
+*`人生最后一次斯坦福`吗？*😭
 
 <div class="image-grid image-grid--4-cols">
   <figure>
@@ -164,6 +166,10 @@ Google Store里面有不少Google的周边，马克杯和帆布袋都不错。Go
 </div>
 
 ## People
+### 公交车司机
+### 神秘人
+### No King, No Trump Takeover
+
 ## Life
 ## Study
 
