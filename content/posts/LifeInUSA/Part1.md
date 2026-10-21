@@ -99,6 +99,7 @@ tags = ["US","Travel"]
 </div>
 
 ## San Jose
+### Tech Company
 虽然贵为首府，San Jose没有我刻板印象中高楼耸立的大城市的感觉。乘坐有轨电车穿梭在市区里（人生第一次乘坐有轨电车🚋），感觉整个城市冷冷清清（也有可能是周末的原因）。
 
 我们把 San Jose的第一站选在了Apple Park，当然我们只能去Visitor Center，说是游客中心，其实就是一个大号Apple Store，一楼除了手机可以买一些轻食，二楼是开放式的平台，可以看到环形建筑的一角。
@@ -126,7 +127,41 @@ tags = ["US","Travel"]
   </figure>
 </div>
 
-第二站我们
+Google Store里面有不少Google的周边，马克杯和帆布袋都不错。Google园区另外都不能进，不过外围有一些很有格调的雕塑，还有不同皮肤的Android Bots。
+
+<div class="image-grid image-grid--4-cols">
+  <figure>
+    <img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/photo_2026-10-17_17-05-12.jpg" alt="Android Bot">
+  </figure>
+  <figure>
+    <img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/photo_2026-10-17_17-05-22.jpg" alt="Google Mug">
+  </figure>
+  <figure>
+    <img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/photo_2026-10-17_17-05-26.jpg" alt="神秘小雕塑">
+  </figure>
+  <figure>
+    <img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/photo_2026-10-17_17-05-06.jpg" alt="漂亮的建筑艺术">
+  </figure>
+</div>
+
+### Stanford University
+
+和伯克利的哥特式建筑不尽相同，斯坦福的建筑风格更偏向罗曼式`（Romanesque）`。步入校门，一股古典气息就扑面而来
+
+<div class="image-grid image-grid--4-cols">
+  <figure>
+    <img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/photo_2026-10-17_17-29-09.jpg" alt="走廊">
+  </figure>
+  <figure>
+    <img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/photo_2026-10-17_17-55-53.jpg" alt="Another Tower">
+  </figure>
+  <figure>
+    <img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/photo_2026-10-17_17-29-26.jpg" alt="校园一隅">
+  </figure>
+  <figure>
+    <img src="https://mikeogilvy.uk/2026-10-18%20USA-blog/photo_2026-10-17_17-55-57.jpg" alt="想不好写什么">
+  </figure>
+</div>
 
 ## People
 ## Life
