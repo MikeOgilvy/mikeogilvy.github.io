@@ -10,7 +10,7 @@ comments: false
 
 {{< friend name="SimonSunCHN" url="https://SimonSunCHN.github.io/" bio="Linguistics, Programming, Transport, and more ..." avatar="https://simonsunchn.github.io/_astro/avatar01.I_pFhcj7_Z1QvfKd.webp" >}}
 
-{{< friend name="Wang Chün-Chê" bio="Why, 35 years ago, fly the Atlantic?" avatar="https://wangchunche.github.io/avatar.jpg" >}}
+{{< friend name="Wang Chün-Chê" url="https://wangchunche.github.io/" bio="Why, 35 years ago, fly the Atlantic?" avatar="https://wangchunche.github.io/avatar.jpg" >}}
 
 
 **Exchange Links**
